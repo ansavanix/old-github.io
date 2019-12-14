@@ -11,4 +11,5 @@
   <br>
   <h2>Math</h2>
   <br>
+  Distance finder finds the distance between two points on an xy coordinate plane.
   
