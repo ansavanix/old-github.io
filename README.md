@@ -8,3 +8,7 @@
   Favorable odds always produces a number above 1.
 <br>
   Unfavorable odds always produces a number below 20.
+  <br>
+  <h2>Math</h2>
+  <br>
+  
