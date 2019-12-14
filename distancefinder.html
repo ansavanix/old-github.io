@@ -18,14 +18,9 @@
             var y1 = document.getElementById("y1").value;
             var x2 = document.getElementById("x2").value;
             var y2 = document.getElementById("y2").value;
-            console.log (x1)
-            console.log (y1)
-            console.log (x2)
-            console.log (y2)
             var x = x2 - x1
             var y = y2 - y1
             var roughAnswer = Math.pow (x,2) + Math.pow (y,2)
-            console.log (roughAnswer)
             var finalAnswer = Math.sqrt( roughAnswer )
             document.getElementById("finalAnswer").innerHTML = finalAnswer;
         }
