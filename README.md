@@ -1,4 +1,3 @@
 # d20
-A 20 sided dice roller.
 <br>
-A very simple 20 sided dice with rigged variants.
+<h1> A very simple web(html and js) based 20 sided dice with rigged variants. </h1>
