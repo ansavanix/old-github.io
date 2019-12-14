@@ -1,0 +1,34 @@
+<html>
+<body>
+    <input type="text" id="x1"=>x1</input>
+    <br>
+    <input type="text" id="y1"=>y1</input>
+    <br>
+    <input type="text" id="x2"=>x2</input>
+    <br>
+    <input type="text" id="y2"=>y2</input>
+    <br>
+    <button onclick="test()">Submit</button>
+    <br>
+    <font size="50" color="black" id="finalAnswer"></font>
+    <script>
+        function test()
+        {
+            var x1 = document.getElementById("x1").value;
+            var y1 = document.getElementById("y1").value;
+            var x2 = document.getElementById("x2").value;
+            var y2 = document.getElementById("y2").value;
+            console.log (x1)
+            console.log (y1)
+            console.log (x2)
+            console.log (y2)
+            var x = x2 - x1
+            var y = y2 - y1
+            var roughAnswer = Math.pow (x,2) + Math.pow (y,2)
+            console.log (roughAnswer)
+            var finalAnswer = Math.sqrt( roughAnswer )
+            document.getElementById("finalAnswer").innerHTML = finalAnswer;
+        }
+    </script>
+</body>
+</html>
