@@ -1,7 +1,10 @@
 # d20
 <br>
-<h1> A very simple web(html and js) based 20 sided dice with rigged variants. </h1>
+<h1> An assortnment of web based tools. </h1>
+<h2>D20</h2>
 <BR> 
+  D20.html is a normal 20 sided dice with no tricks up its sleeve.
+<br>
   Favorable odds always produces a number above 1.
 <br>
   Unfavorable odds always produces a number below 20.
