@@ -1,5 +1,5 @@
 <html>
-    enlarger {      font-size: 150%;     }     
+    h1 {      font-size: 300%;     } 
 .ascii-art {
         font-family: monospace;
         white-space: pre;
@@ -20,14 +20,107 @@
     
 <center>
     <title> Tic-Tac-Toe </title>
-    <h1>Tic-Tac-Toe</h1>
-    <div class="ascii-art">
-<enlarger>
-  1 2 3
-a - - -
-b - - -
- c - - - 
-</enlarger>
+    <h1 style= "font-size:60px">Tic-Tac-Toe</h1>
+    <div style= "font-size:30px", class="ascii-art", id="board">
+1   2   3
+
+4   5   6
+
+7   8   9
 </div>
+<br>
+<h2>Player X Go (1-9)</h2>
+    <input placeholder="" style = "color:#00FF00;background-color:#000000; border-color: #00FF00;"type="number" id="move"></input>
+    <br>
+<br>
+<button style = "background-color:black;color:rgb(0, 255, 0); border-color: #00FF00; font-size:20px" onclick="test()">Confirm Move</button>
+<br>
+<br>
+<a style= "font-size:20px"; href="index.html"; > Back to My Projects </a>
 </center>
+<script>
+        var x = "X"
+        var o = "O"
+        var player = x
+    function test()
+    {
+
+        var moves = document.getElementById("move").value;
+    console.log (moves)
+        
+        if (moves === "1"){
+        var oldBoard = document.getElementById("board").textContent;
+console.log (oldBoard);
+var newBoard = oldBoard.replace("1", player)
+document.getElementById("board").innerHTML = newBoard;
+}   
+    
+    if (moves === "2")
+         {
+        var oldBoard = document.getElementById("board").textContent;
+console.log (oldBoard);
+var newBoard = oldBoard.replace("2", player)
+document.getElementById("board").innerHTML = newBoard;
+}
+if (moves === "3")
+         {
+        var oldBoard = document.getElementById("board").textContent;
+console.log (oldBoard);
+var newBoard = oldBoard.replace("3", player)
+document.getElementById("board").innerHTML = newBoard;
+}
+if (moves === "4")
+         {
+        var oldBoard = document.getElementById("board").textContent;
+console.log (oldBoard);
+var newBoard = oldBoard.replace("4", player)
+document.getElementById("board").innerHTML = newBoard;
+}
+if (moves === "5")
+         {
+        var oldBoard = document.getElementById("board").textContent;
+console.log (oldBoard);
+var newBoard = oldBoard.replace("5", player)
+document.getElementById("board").innerHTML = newBoard;
+}
+if (moves === "6")
+         {
+        var oldBoard = document.getElementById("board").textContent;
+console.log (oldBoard);
+var newBoard = oldBoard.replace("6", player)
+document.getElementById("board").innerHTML = newBoard;
+}
+if (moves === "7")
+         {
+        var oldBoard = document.getElementById("board").textContent;
+console.log (oldBoard);
+var newBoard = oldBoard.replace("7", player)
+document.getElementById("board").innerHTML = newBoard;
+}
+if (moves === "8")
+         {
+        var oldBoard = document.getElementById("board").textContent;
+console.log (oldBoard);
+var newBoard = oldBoard.replace("8", player)
+document.getElementById("board").innerHTML = newBoard;
+}
+if (moves === "9")
+         {
+        var oldBoard = document.getElementById("board").textContent;
+console.log (oldBoard);
+var newBoard = oldBoard.replace("9", player)
+document.getElementById("board").innerHTML = newBoard;
+}
+        
+    
+    if (player === x){
+        player = o;
+        console.log (player)
+    } else {
+        player = x
+        console.log (player)
+    }
+    }
+
+</script>
 </html>
