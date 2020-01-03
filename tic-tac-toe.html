@@ -29,38 +29,96 @@
 7   8   9
 </div>
 <br>
-<h2>Player X Go (1-9)</h2>
+<h2 id="turn">Player X Go (1-9)</h2>
     <input placeholder="" style = "color:#00FF00;background-color:#000000; border-color: #00FF00;"type="number" id="move"></input>
     <br>
 <br>
 <button style = "background-color:black;color:rgb(0, 255, 0); border-color: #00FF00; font-size:20px" onclick="test()">Confirm Move</button>
 <br>
+<p style= "color:red; font-size:30px" id="invalidMove"></p>
 <br>
 <a style= "font-size:20px"; href="index.html"; > Back to My Projects </a>
 </center>
 <script>
-        var x = "X"
-        var o = "O"
-        var player = x
+        var x = "X";
+        var Y = "Y";
+        var player = x;
+        var xleftvert = 0;
+        var xmidvert = 0;
+        var xrightvert = 0;
+        var xtophor = 0;
+        var xmidhor = 0;
+        var xlowhor = 0;
+        var xdiag1 = 0;
+        var xdiag2 = 0;
+        var yleftvert = 0;
+        var ymidvert = 0;
+        var yrightvert = 0;
+        var ytophor = 0;
+        var ymidhor = 0;
+        var ylowhor = 0;
+        var ydiag1 = 0;
+        var ydiag2 = 0;
+        var onetaken = 0;
+        var twotaken = 0;
+        var threetaken = 0;
+        var fourtaken = 0;
+        var fivetaken = 0;
+        var sixtaken = 0;
+        var seventaken = 0;
+        var eighttaken = 0;
+        var ninetaken = 0;
+
     function test()
     {
 
         var moves = document.getElementById("move").value;
     console.log (moves)
+    if (moves > 9){
+        document.getElementById("invalidMove").textContent = "Invalid Move! Choose a space 1-9.";
         
+    }
+    if (moves < 1){
+        document.getElementById("invalidMove").textContent = "Invalid Move! Choose a space 1-9.";
+    } 
         if (moves === "1"){
+            if (onetaken > 0){
+                document.getElementById("invalidMove").textContent = "Invalid Move! Space 1 is taken!";
+                document.getElementById("move").value = "";
+            }else{
+                onetaken++
         var oldBoard = document.getElementById("board").textContent;
 console.log (oldBoard);
 var newBoard = oldBoard.replace("1", player)
 document.getElementById("board").innerHTML = newBoard;
-}   
+if (player === x){
+        player = Y;
+        console.log (player)
+        document.getElementById("turn").innerHTML = "Player Y Go (1-9)";
+    } else {
+        player = x
+        console.log (player)
+        document.getElementById("turn").innerHTML = "Player X Go (1-9)";
+        
+    }
+    document.getElementById("invalidMove").textContent = "";
+}   }
     
-    if (moves === "2")
-         {
+    if (moves === "2"){
         var oldBoard = document.getElementById("board").textContent;
 console.log (oldBoard);
 var newBoard = oldBoard.replace("2", player)
 document.getElementById("board").innerHTML = newBoard;
+if (player === x){
+        player = Y;
+        console.log (player)
+        document.getElementById("turn").innerHTML = "Player Y Go (1-9)";
+    } else {
+        player = x
+        console.log (player)
+        document.getElementById("turn").innerHTML = "Player X Go (1-9)";
+    }
+    document.getElementById("invalidMove").textContent = "";
 }
 if (moves === "3")
          {
@@ -68,6 +126,16 @@ if (moves === "3")
 console.log (oldBoard);
 var newBoard = oldBoard.replace("3", player)
 document.getElementById("board").innerHTML = newBoard;
+if (player === x){
+        player = Y;
+        console.log (player)
+        document.getElementById("turn").innerHTML = "Player Y Go (1-9)";
+    } else {
+        player = x
+        console.log (player)
+        document.getElementById("turn").innerHTML = "Player X Go (1-9)";
+    }
+    document.getElementById("invalidMove").textContent = "";
 }
 if (moves === "4")
          {
@@ -75,6 +143,16 @@ if (moves === "4")
 console.log (oldBoard);
 var newBoard = oldBoard.replace("4", player)
 document.getElementById("board").innerHTML = newBoard;
+if (player === x){
+        player = Y;
+        console.log (player)
+        document.getElementById("turn").innerHTML = "Player Y Go (1-9)";
+    } else {
+        player = x
+        console.log (player)
+        document.getElementById("turn").innerHTML = "Player X Go (1-9)";
+    }
+    document.getElementById("invalidMove").textContent = "";
 }
 if (moves === "5")
          {
@@ -82,6 +160,16 @@ if (moves === "5")
 console.log (oldBoard);
 var newBoard = oldBoard.replace("5", player)
 document.getElementById("board").innerHTML = newBoard;
+if (player === x){
+        player = Y;
+        console.log (player)
+        document.getElementById("turn").innerHTML = "Player Y Go (1-9)";
+    } else {
+        player = x
+        console.log (player)
+        document.getElementById("turn").innerHTML = "Player X Go (1-9)";
+    }
+    document.getElementById("invalidMove").textContent = "";
 }
 if (moves === "6")
          {
@@ -89,6 +177,16 @@ if (moves === "6")
 console.log (oldBoard);
 var newBoard = oldBoard.replace("6", player)
 document.getElementById("board").innerHTML = newBoard;
+if (player === x){
+        player = Y;
+        console.log (player)
+        document.getElementById("turn").innerHTML = "Player Y Go (1-9)";
+    } else {
+        player = x
+        console.log (player)
+        document.getElementById("turn").innerHTML = "Player X Go (1-9)";
+    }
+    document.getElementById("invalidMove").textContent = "";
 }
 if (moves === "7")
          {
@@ -96,6 +194,16 @@ if (moves === "7")
 console.log (oldBoard);
 var newBoard = oldBoard.replace("7", player)
 document.getElementById("board").innerHTML = newBoard;
+if (player === x){
+        player = Y;
+        console.log (player)
+        document.getElementById("turn").innerHTML = "Player Y Go (1-9)";
+    } else {
+        player = x
+        console.log (player)
+        document.getElementById("turn").innerHTML = "Player X Go (1-9)";
+    }
+    document.getElementById("invalidMove").textContent = "";
 }
 if (moves === "8")
          {
@@ -103,6 +211,16 @@ if (moves === "8")
 console.log (oldBoard);
 var newBoard = oldBoard.replace("8", player)
 document.getElementById("board").innerHTML = newBoard;
+if (player === x){
+        player = Y;
+        console.log (player)
+        document.getElementById("turn").innerHTML = "Player Y Go (1-9)";
+    } else {
+        player = x
+        console.log (player)
+        document.getElementById("turn").innerHTML = "Player X Go (1-9)";
+    }
+    document.getElementById("invalidMove").textContent = "";
 }
 if (moves === "9")
          {
@@ -110,17 +228,22 @@ if (moves === "9")
 console.log (oldBoard);
 var newBoard = oldBoard.replace("9", player)
 document.getElementById("board").innerHTML = newBoard;
-}
-        
-    
-    if (player === x){
-        player = o;
+if (player === x){
+        player = Y;
         console.log (player)
+        document.getElementById("turn").innerHTML = "Player Y Go (1-9)";
     } else {
         player = x
         console.log (player)
+        document.getElementById("turn").innerHTML = "Player X Go (1-9)";
     }
+    document.getElementById("invalidMove").textContent = "";
+}
+        
+
+
     }
+    
 
 </script>
 </html>
