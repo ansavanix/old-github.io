@@ -76,10 +76,11 @@
     console.log (moves)
     if (moves > 9){
         document.getElementById("invalidMove").textContent = "Invalid Move! Choose a space 1-9.";
-        
+        document.getElementById("move").value = "";
     }
     if (moves < 1){
         document.getElementById("invalidMove").textContent = "Invalid Move! Choose a space 1-9.";
+        document.getElementById("move").value = "";
     } 
         if (moves === "1"){
             if (onetaken > 0){
@@ -102,6 +103,7 @@ if (player === x){
         
     }
     document.getElementById("invalidMove").textContent = "";
+    document.getElementById("move").value = "";
 }   }
     
     if (moves === "2"){
@@ -124,6 +126,7 @@ if (player === x){
         document.getElementById("turn").innerHTML = "Player X Go (1-9)";
     }
     document.getElementById("invalidMove").textContent = "";
+    document.getElementById("move").value = "";
 }}
 if (moves === "3")
          {
@@ -146,6 +149,7 @@ if (player === x){
         document.getElementById("turn").innerHTML = "Player X Go (1-9)";
     }
     document.getElementById("invalidMove").textContent = "";
+    document.getElementById("move").value = "";
 }}
 if (moves === "4")
          {
@@ -168,6 +172,7 @@ if (player === x){
         document.getElementById("turn").innerHTML = "Player X Go (1-9)";
     }
     document.getElementById("invalidMove").textContent = "";
+    document.getElementById("move").value = "";
 }}
 if (moves === "5")
          {
@@ -190,6 +195,7 @@ if (player === x){
         document.getElementById("turn").innerHTML = "Player X Go (1-9)";
     }
     document.getElementById("invalidMove").textContent = "";
+    document.getElementById("move").value = "";
 }}
 if (moves === "6")
          {
@@ -212,6 +218,7 @@ if (player === x){
         document.getElementById("turn").innerHTML = "Player X Go (1-9)";
     }
     document.getElementById("invalidMove").textContent = "";
+    document.getElementById("move").value = "";
 }}
 if (moves === "7")
          {
@@ -234,6 +241,7 @@ if (player === x){
         document.getElementById("turn").innerHTML = "Player X Go (1-9)";
     }
     document.getElementById("invalidMove").textContent = "";
+    document.getElementById("move").value = "";
 }}
 if (moves === "8")
          {
@@ -278,6 +286,7 @@ if (player === x){
         document.getElementById("turn").innerHTML = "Player X Go (1-9)";
     }
     document.getElementById("invalidMove").textContent = "";
+    document.getElementById("move").value = "";
 }}
         
 
