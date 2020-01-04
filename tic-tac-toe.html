@@ -105,6 +105,11 @@ if (player === x){
 }   }
     
     if (moves === "2"){
+        if (twotaken > 0){
+                document.getElementById("invalidMove").textContent = "Invalid Move! Space 2 is taken!";
+                document.getElementById("move").value = "";
+            }else{
+                twotaken++
         var oldBoard = document.getElementById("board").textContent;
 console.log (oldBoard);
 var newBoard = oldBoard.replace("2", player)
@@ -119,9 +124,14 @@ if (player === x){
         document.getElementById("turn").innerHTML = "Player X Go (1-9)";
     }
     document.getElementById("invalidMove").textContent = "";
-}
+}}
 if (moves === "3")
          {
+            if (threetaken > 0){
+                document.getElementById("invalidMove").textContent = "Invalid Move! Space 3 is taken!";
+                document.getElementById("move").value = "";
+            }else{
+                threetaken++
         var oldBoard = document.getElementById("board").textContent;
 console.log (oldBoard);
 var newBoard = oldBoard.replace("3", player)
@@ -136,9 +146,14 @@ if (player === x){
         document.getElementById("turn").innerHTML = "Player X Go (1-9)";
     }
     document.getElementById("invalidMove").textContent = "";
-}
+}}
 if (moves === "4")
          {
+            if (fourtaken > 0){
+                document.getElementById("invalidMove").textContent = "Invalid Move! Space 4 is taken!";
+                document.getElementById("move").value = "";
+            }else{
+                fourtaken++
         var oldBoard = document.getElementById("board").textContent;
 console.log (oldBoard);
 var newBoard = oldBoard.replace("4", player)
@@ -153,9 +168,14 @@ if (player === x){
         document.getElementById("turn").innerHTML = "Player X Go (1-9)";
     }
     document.getElementById("invalidMove").textContent = "";
-}
+}}
 if (moves === "5")
          {
+            if (fivetaken > 0){
+                document.getElementById("invalidMove").textContent = "Invalid Move! Space 5 is taken!";
+                document.getElementById("move").value = "";
+            }else{
+                fivetaken++
         var oldBoard = document.getElementById("board").textContent;
 console.log (oldBoard);
 var newBoard = oldBoard.replace("5", player)
@@ -170,9 +190,14 @@ if (player === x){
         document.getElementById("turn").innerHTML = "Player X Go (1-9)";
     }
     document.getElementById("invalidMove").textContent = "";
-}
+}}
 if (moves === "6")
          {
+            if (sixtaken > 0){
+                document.getElementById("invalidMove").textContent = "Invalid Move! Space 6 is taken!";
+                document.getElementById("move").value = "";
+            }else{
+                sixtaken++
         var oldBoard = document.getElementById("board").textContent;
 console.log (oldBoard);
 var newBoard = oldBoard.replace("6", player)
@@ -187,9 +212,14 @@ if (player === x){
         document.getElementById("turn").innerHTML = "Player X Go (1-9)";
     }
     document.getElementById("invalidMove").textContent = "";
-}
+}}
 if (moves === "7")
          {
+            if (seventaken > 0){
+                document.getElementById("invalidMove").textContent = "Invalid Move! Space 7 is taken!";
+                document.getElementById("move").value = "";
+            }else{
+                seventaken++
         var oldBoard = document.getElementById("board").textContent;
 console.log (oldBoard);
 var newBoard = oldBoard.replace("7", player)
@@ -204,9 +234,14 @@ if (player === x){
         document.getElementById("turn").innerHTML = "Player X Go (1-9)";
     }
     document.getElementById("invalidMove").textContent = "";
-}
+}}
 if (moves === "8")
          {
+            if (eighttaken > 0){
+                document.getElementById("invalidMove").textContent = "Invalid Move! Space 1 is taken!";
+                document.getElementById("move").value = "";
+            }else{
+                eighttaken++
         var oldBoard = document.getElementById("board").textContent;
 console.log (oldBoard);
 var newBoard = oldBoard.replace("8", player)
@@ -221,9 +256,14 @@ if (player === x){
         document.getElementById("turn").innerHTML = "Player X Go (1-9)";
     }
     document.getElementById("invalidMove").textContent = "";
-}
+}}
 if (moves === "9")
          {
+            if (ninetaken > 0){
+                document.getElementById("invalidMove").textContent = "Invalid Move! Space 9 is taken!";
+                document.getElementById("move").value = "";
+            }else{
+                ninetaken++
         var oldBoard = document.getElementById("board").textContent;
 console.log (oldBoard);
 var newBoard = oldBoard.replace("9", player)
@@ -238,7 +278,7 @@ if (player === x){
         document.getElementById("turn").innerHTML = "Player X Go (1-9)";
     }
     document.getElementById("invalidMove").textContent = "";
-}
+}}
         
 
 
