@@ -71,7 +71,6 @@
 
     function test()
     {
-
         var moves = document.getElementById("move").value;
     console.log (moves)
     if (moves > 9){
@@ -96,11 +95,16 @@ if (player === x){
         player = Y;
         console.log (player)
         document.getElementById("turn").innerHTML = "Player Y Go (1-9)";
+        xdiag1++
+        xleftvert++
+        xtophor++
     } else {
         player = x
         console.log (player)
         document.getElementById("turn").innerHTML = "Player X Go (1-9)";
-        
+        ydiag1++
+        yleftvert++
+        ytophor++
     }
     document.getElementById("invalidMove").textContent = "";
     document.getElementById("move").value = "";
@@ -120,10 +124,14 @@ if (player === x){
         player = Y;
         console.log (player)
         document.getElementById("turn").innerHTML = "Player Y Go (1-9)";
+        xtophor++
+        xmidvert++
     } else {
         player = x
         console.log (player)
         document.getElementById("turn").innerHTML = "Player X Go (1-9)";
+        ytophor++
+        ymidvert++
     }
     document.getElementById("invalidMove").textContent = "";
     document.getElementById("move").value = "";
@@ -143,10 +151,16 @@ if (player === x){
         player = Y;
         console.log (player)
         document.getElementById("turn").innerHTML = "Player Y Go (1-9)";
+xtophor++
+xrightvert++
+xdiag2++
     } else {
         player = x
         console.log (player)
         document.getElementById("turn").innerHTML = "Player X Go (1-9)";
+ytophor++
+yrightvert++
+ydiag2++
     }
     document.getElementById("invalidMove").textContent = "";
     document.getElementById("move").value = "";
@@ -166,10 +180,14 @@ if (player === x){
         player = Y;
         console.log (player)
         document.getElementById("turn").innerHTML = "Player Y Go (1-9)";
+        xmidhor++
+        xleftvert++
     } else {
         player = x
         console.log (player)
         document.getElementById("turn").innerHTML = "Player X Go (1-9)";
+        ymidhor++
+        yleftvert++
     }
     document.getElementById("invalidMove").textContent = "";
     document.getElementById("move").value = "";
@@ -189,10 +207,18 @@ if (player === x){
         player = Y;
         console.log (player)
         document.getElementById("turn").innerHTML = "Player Y Go (1-9)";
+        xmidhor++
+        xmidvert++
+        xdiag1++
+        xdiag2++
     } else {
         player = x
         console.log (player)
         document.getElementById("turn").innerHTML = "Player X Go (1-9)";
+        ymidhor++
+        ymidvert++
+        ydiag1++
+        ydiag2++
     }
     document.getElementById("invalidMove").textContent = "";
     document.getElementById("move").value = "";
@@ -212,10 +238,14 @@ if (player === x){
         player = Y;
         console.log (player)
         document.getElementById("turn").innerHTML = "Player Y Go (1-9)";
+        xmidhor++
+        xrightvert++
     } else {
         player = x
         console.log (player)
         document.getElementById("turn").innerHTML = "Player X Go (1-9)";
+        ymidhor++
+        yrightvert++
     }
     document.getElementById("invalidMove").textContent = "";
     document.getElementById("move").value = "";
@@ -235,10 +265,17 @@ if (player === x){
         player = Y;
         console.log (player)
         document.getElementById("turn").innerHTML = "Player Y Go (1-9)";
+        xdiag2++
+        xleftvert++
+        xlowhor++
     } else {
         player = x
         console.log (player)
         document.getElementById("turn").innerHTML = "Player X Go (1-9)";
+        ydiag2++
+        yleftvert++
+        ylowhor++
+
     }
     document.getElementById("invalidMove").textContent = "";
     document.getElementById("move").value = "";
@@ -258,10 +295,14 @@ if (player === x){
         player = Y;
         console.log (player)
         document.getElementById("turn").innerHTML = "Player Y Go (1-9)";
+        xmidvert++
+        xlowhor++
     } else {
         player = x
         console.log (player)
         document.getElementById("turn").innerHTML = "Player X Go (1-9)";
+        ylowhor++
+        ymidvert++
     }
     document.getElementById("invalidMove").textContent = "";
 }}
@@ -280,17 +321,84 @@ if (player === x){
         player = Y;
         console.log (player)
         document.getElementById("turn").innerHTML = "Player Y Go (1-9)";
+        xdiag1++
+        xrightvert++
+        xlowhor++
     } else {
         player = x
         console.log (player)
         document.getElementById("turn").innerHTML = "Player X Go (1-9)";
+        ydiag1++
+        yrightvert++
+        ylowhor++
     }
     document.getElementById("invalidMove").textContent = "";
     document.getElementById("move").value = "";
 }}
-        
-
-
+     if (xdiag1 > 2){
+        document.getElementById("invalidMove").textContent = "Player X Wins!";
+        document.getElementById("move").value = "";
+     }   
+     if (xdiag2 > 2){
+        document.getElementById("invalidMove").textContent = "Player X Wins!";
+        document.getElementById("move").value = "";
+     }   
+     if (xtophor > 2){
+        document.getElementById("invalidMove").textContent = "Player X Wins!";
+        document.getElementById("move").value = "";
+     }   
+     if (xmidhor > 2){
+        document.getElementById("invalidMove").textContent = "Player X Wins!";
+        document.getElementById("move").value = "";
+     }   
+     if (xlowhor > 2){
+        document.getElementById("invalidMove").textContent = "Player X Wins!";
+        document.getElementById("move").value = "";
+     }   
+     if (xleftvert > 2){
+        document.getElementById("invalidMove").textContent = "Player X Wins!";
+        document.getElementById("move").value = "";
+     }   
+     if (xmidvert > 2){
+        document.getElementById("invalidMove").textContent = "Player X Wins!";
+        document.getElementById("move").value = "";
+     }   
+     if (xrightvert > 2){
+        document.getElementById("invalidMove").textContent = "Player X Wins!";
+        document.getElementById("move").value = "";
+     }   
+     if (ydiag1 > 2){
+        document.getElementById("invalidMove").textContent = "Player Y Wins!";
+        document.getElementById("move").value = "";
+     }   
+     if (ydiag2 > 2){
+        document.getElementById("invalidMove").textContent = "Player Y Wins!";
+        document.getElementById("move").value = "";
+     }   
+     if (ytophor > 2){
+        document.getElementById("invalidMove").textContent = "Player Y Wins!";
+        document.getElementById("move").value = "";
+     }   
+     if (ymidhor > 2){
+        document.getElementById("invalidMove").textContent = "Player Y Wins!";
+        document.getElementById("move").value = "";
+     }   
+     if (ylowhor > 2){
+        document.getElementById("invalidMove").textContent = "Player Y Wins!";
+        document.getElementById("move").value = "";
+     }   
+     if (yleftvert > 2){
+        document.getElementById("invalidMove").textContent = "Player Y Wins!";
+        document.getElementById("move").value = "";
+     }   
+     if (ymidvert > 2){
+        document.getElementById("invalidMove").textContent = "Player Y Wins!";
+        document.getElementById("move").value = "";
+     }   
+     if (yrightvert > 2){
+        document.getElementById("invalidMove").textContent = "Player Y Wins!";
+        document.getElementById("move").value = "";
+     }  
     }
     
 
