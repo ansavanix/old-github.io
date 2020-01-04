@@ -9,7 +9,12 @@
 <br>
   Unfavorable odds always produces a number below 20.
   <br>
+  <h2>Games</h2>
+  <br>
+  Tic-Tac-Toe
+  <br>
   <h2>Math</h2>
   <br>
   Distance finder finds the distance between two points on an xy coordinate plane.
+  
   
