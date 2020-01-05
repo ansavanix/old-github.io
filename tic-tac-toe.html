@@ -329,6 +329,7 @@ if (player === x){
         ymidvert++
     }
     document.getElementById("invalidMove").textContent = "";
+    document.getElementById("move").value = "";
 }}
 if (moves === "9")
          {
@@ -367,6 +368,12 @@ if (player === x){
         xwon++
         document.getElementById("boardResetter").style.display = "block";
         document.getElementById("invalidMove").style.display = "block";
+        var oldScoreBoard = document.getElementById("scoreboard").textContent;
+console.log (oldScoreBoard);
+var newScoreBoard = oldScoreBoard.replace("X:0", "X:"+xwon)
+console.log (newScoreBoard)
+document.getElementById("scoreboard").innerHTML = newScoreBoard;
+        
      }   
      if (xdiag2 > 2){
         document.getElementById("invalidMove").textContent = "Player X Wins!";
@@ -374,6 +381,11 @@ if (player === x){
         xwon++
         document.getElementById("boardResetter").style.display = "block";
         document.getElementById("invalidMove").style.display = "block";
+        var oldScoreBoard = document.getElementById("scoreboard").textContent;
+console.log (oldScoreBoard);
+var newScoreBoard = oldScoreBoard.replace("X:0", "X:"+xwon)
+console.log (newScoreBoard)
+document.getElementById("scoreboard").innerHTML = newScoreBoard;
      }   
      if (xtophor > 2){
         document.getElementById("invalidMove").textContent = "Player X Wins!";
@@ -381,6 +393,11 @@ if (player === x){
         xwon++
         document.getElementById("boardResetter").style.display = "block";
         document.getElementById("invalidMove").style.display = "block";
+        var oldScoreBoard = document.getElementById("scoreboard").textContent;
+console.log (oldScoreBoard);
+var newScoreBoard = oldScoreBoard.replace("X:0", "X:"+xwon)
+console.log (newScoreBoard)
+document.getElementById("scoreboard").innerHTML = newScoreBoard;
      }   
      if (xmidhor > 2){
         document.getElementById("invalidMove").textContent = "Player X Wins!";
@@ -388,6 +405,11 @@ if (player === x){
         xwon++
         document.getElementById("boardResetter").style.display = "block";
         document.getElementById("invalidMove").style.display = "block";
+        var oldScoreBoard = document.getElementById("scoreboard").textContent;
+console.log (oldScoreBoard);
+var newScoreBoard = oldScoreBoard.replace("X:0", "X:"+xwon)
+console.log (newScoreBoard)
+document.getElementById("scoreboard").innerHTML = newScoreBoard;
      }   
      if (xlowhor > 2){
         document.getElementById("invalidMove").textContent = "Player X Wins!";
@@ -395,6 +417,11 @@ if (player === x){
         xwon++
         document.getElementById("boardResetter").style.display = "block";
         document.getElementById("invalidMove").style.display = "block";
+        var oldScoreBoard = document.getElementById("scoreboard").textContent;
+console.log (oldScoreBoard);
+var newScoreBoard = oldScoreBoard.replace("X:0", "X:"+xwon)
+console.log (newScoreBoard)
+document.getElementById("scoreboard").innerHTML = newScoreBoard;
      }   
      if (xleftvert > 2){
         document.getElementById("invalidMove").textContent = "Player X Wins!";
@@ -402,6 +429,11 @@ if (player === x){
         xwon++
         document.getElementById("boardResetter").style.display = "block";
         document.getElementById("invalidMove").style.display = "block";
+        var oldScoreBoard = document.getElementById("scoreboard").textContent;
+console.log (oldScoreBoard);
+var newScoreBoard = oldScoreBoard.replace("X:0", "X:"+xwon)
+console.log (newScoreBoard)
+document.getElementById("scoreboard").innerHTML = newScoreBoard;
      }   
      if (xmidvert > 2){
         document.getElementById("invalidMove").textContent = "Player X Wins!";
@@ -409,6 +441,11 @@ if (player === x){
         xwon++
         document.getElementById("boardResetter").style.display = "block";
         document.getElementById("invalidMove").style.display = "block";
+        var oldScoreBoard = document.getElementById("scoreboard").textContent;
+console.log (oldScoreBoard);
+var newScoreBoard = oldScoreBoard.replace("X:0", "X:"+xwon)
+console.log (newScoreBoard)
+document.getElementById("scoreboard").innerHTML = newScoreBoard;
      }   
      if (xrightvert > 2){
         document.getElementById("invalidMove").textContent = "Player X Wins!";
@@ -416,12 +453,23 @@ if (player === x){
         xwon++
         document.getElementById("boardResetter").style.display = "block";
         document.getElementById("invalidMove").style.display = "block";
+        var oldScoreBoard = document.getElementById("scoreboard").textContent;
+console.log (oldScoreBoard);
+var newScoreBoard = oldScoreBoard.replace("X:0", "X:"+xwon)
+console.log (newScoreBoard)
+document.getElementById("scoreboard").innerHTML = newScoreBoard;
      }   
      if (ydiag1 > 2){
+        ywon++
         document.getElementById("invalidMove").textContent = "Player Y Wins!";
         document.getElementById("move").value = "";
         document.getElementById("boardResetter").style.display = "block";
         document.getElementById("invalidMove").style.display = "block";
+        var oldScoreBoard = document.getElementById("scoreboard").textContent;
+console.log (oldScoreBoard);
+var newScoreBoard = oldScoreBoard.replace("Y:0", "Y:"+ywon)
+console.log (newScoreBoard)
+document.getElementById("scoreboard").innerHTML = newScoreBoard;
      }   
      if (ydiag2 > 2){
         document.getElementById("invalidMove").textContent = "Player Y Wins!";
@@ -429,6 +477,11 @@ if (player === x){
         ywon++
         document.getElementById("boardResetter").style.display = "block";
         document.getElementById("invalidMove").style.display = "block";
+        var oldScoreBoard = document.getElementById("scoreboard").textContent;
+console.log (oldScoreBoard);
+var newScoreBoard = oldScoreBoard.replace("Y:0", "Y:"+ywon)
+console.log (newScoreBoard)
+document.getElementById("scoreboard").innerHTML = newScoreBoard;
      }   
      if (ytophor > 2){
         document.getElementById("invalidMove").textContent = "Player Y Wins!";
@@ -436,6 +489,11 @@ if (player === x){
         ywon++
         document.getElementById("boardResetter").style.display = "block";
         document.getElementById("invalidMove").style.display = "block";
+        var oldScoreBoard = document.getElementById("scoreboard").textContent;
+console.log (oldScoreBoard);
+var newScoreBoard = oldScoreBoard.replace("Y:0", "Y:"+ywon)
+console.log (newScoreBoard)
+document.getElementById("scoreboard").innerHTML = newScoreBoard;
      }   
      if (ymidhor > 2){
         document.getElementById("invalidMove").textContent = "Player Y Wins!";
@@ -443,6 +501,11 @@ if (player === x){
         ywon++
         document.getElementById("boardResetter").style.display = "block";
         document.getElementById("invalidMove").style.display = "block";
+        var oldScoreBoard = document.getElementById("scoreboard").textContent;
+console.log (oldScoreBoard);
+var newScoreBoard = oldScoreBoard.replace("Y:0", "Y:"+ywon)
+console.log (newScoreBoard)
+document.getElementById("scoreboard").innerHTML = newScoreBoard;
      }   
      if (ylowhor > 2){
         document.getElementById("invalidMove").textContent = "Player Y Wins!";
@@ -471,15 +534,63 @@ if (player === x){
         ywon++
         document.getElementById("boardResetter").style.display = "block";
         document.getElementById("invalidMove").style.display = "block";
+       
      }  
+     if (onetaken > 0){
+        if (twotaken > 0){
+            if (threetaken > 0){
+                if (fourtaken > 0){
+                    if (fivetaken > 0){
+                        if (sixtaken > 0){
+                            if (seventaken > 0){
+                                if (eighttaken > 0){
+                                    if (ninetaken > 0){
+        document.getElementById("invalidMove").textContent = "Draw!";
+        document.getElementById("move").value = "";
+        document.getElementById("boardResetter").style.display = "block";
+        document.getElementById("invalidMove").style.display = "block";
+            
+        }
+        } 
+        }   
+        }  
+        }
+        }
+        }
+        }
+        }
     }
     function resetBoard(){
         document.getElementById("board").textContent = originboard
         document.getElementById("board").textContent = originboard
         document.getElementById("boardResetter").style.display = "none";
         document.getElementById("invalidMove").style.display = "none";
+        xleftvert = 0;
+        xmidvert = 0;
+        xrightvert = 0;
+        xtophor = 0;
+        xmidhor = 0;
+        xlowhor = 0;
+        xdiag1 = 0;
+        xdiag2 = 0;
+        yleftvert = 0;
+        ymidvert = 0;
+        yrightvert = 0;
+        ytophor = 0;
+        ymidhor = 0;
+        ylowhor = 0;
+        ydiag1 = 0;
+        ydiag2 = 0;
+        onetaken = 0;
+        twotaken = 0;
+        threetaken = 0;
+        fourtaken = 0;
+        fivetaken = 0;
+        sixtaken = 0;
+        seventaken = 0;
+        eighttaken = 0;
+        ninetaken = 0;
     }
 
-hideResetBoard;
 </script>
 </html>
