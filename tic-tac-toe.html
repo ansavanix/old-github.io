@@ -21,6 +21,7 @@
 <center>
     <title> Tic-Tac-Toe </title>
     <h1 style= "font-size:60px">Tic-Tac-Toe</h1>
+    <h1 id="scoreboard" style= "font-size:30px">Player X:0         Player Y:0</h1>
     <div style= "font-size:30px", class="ascii-art", id="board">
 1   2   3
 
@@ -35,11 +36,15 @@
 <br>
 <button style = "background-color:black;color:rgb(0, 255, 0); border-color: #00FF00; font-size:20px" onclick="test()">Confirm Move</button>
 <br>
+<br>
+<button id = "boardResetter" style = "background-color:black;color:rgb(0, 255, 0); border-color: #00FF00; font-size:20px" onclick="resetBoard()">Reset Board</button>
+<br>
 <p style= "color:red; font-size:30px" id="invalidMove"></p>
 <br>
 <a style= "font-size:20px"; href="index.html"; > Back to My Projects </a>
 </center>
 <script>
+        var originboard = document.getElementById("board").textContent
         var x = "X";
         var Y = "Y";
         var player = x;
@@ -68,7 +73,11 @@
         var seventaken = 0;
         var eighttaken = 0;
         var ninetaken = 0;
-
+        var xwon= 0;
+        var ywon = 0;
+        
+        document.getElementById("boardResetter").style.display = "none";
+        document.getElementById("invalidMove").style.display = "none";
     function test()
     {
         var moves = document.getElementById("move").value;
@@ -83,9 +92,11 @@
     } 
         if (moves === "1"){
             if (onetaken > 0){
+                document.getElementById("invalidMove").style.display = "block";
                 document.getElementById("invalidMove").textContent = "Invalid Move! Space 1 is taken!";
                 document.getElementById("move").value = "";
             }else{
+                document.getElementById("invalidMove").style.display = "none";
                 onetaken++
         var oldBoard = document.getElementById("board").textContent;
 console.log (oldBoard);
@@ -103,7 +114,6 @@ if (player === x){
         console.log (player)
         document.getElementById("turn").innerHTML = "Player X Go (1-9)";
         ydiag1++
-        yleftvert++
         ytophor++
     }
     document.getElementById("invalidMove").textContent = "";
@@ -112,9 +122,11 @@ if (player === x){
     
     if (moves === "2"){
         if (twotaken > 0){
+            document.getElementById("invalidMove").style.display = "block";
                 document.getElementById("invalidMove").textContent = "Invalid Move! Space 2 is taken!";
                 document.getElementById("move").value = "";
             }else{
+                document.getElementById("invalidMove").style.display = "none";
                 twotaken++
         var oldBoard = document.getElementById("board").textContent;
 console.log (oldBoard);
@@ -139,9 +151,11 @@ if (player === x){
 if (moves === "3")
          {
             if (threetaken > 0){
+                document.getElementById("invalidMove").style.display = "block";
                 document.getElementById("invalidMove").textContent = "Invalid Move! Space 3 is taken!";
                 document.getElementById("move").value = "";
             }else{
+                document.getElementById("invalidMove").style.display = "none";
                 threetaken++
         var oldBoard = document.getElementById("board").textContent;
 console.log (oldBoard);
@@ -168,9 +182,11 @@ ydiag2++
 if (moves === "4")
          {
             if (fourtaken > 0){
+                document.getElementById("invalidMove").style.display = "block";
                 document.getElementById("invalidMove").textContent = "Invalid Move! Space 4 is taken!";
                 document.getElementById("move").value = "";
             }else{
+                document.getElementById("invalidMove").style.display = "none";
                 fourtaken++
         var oldBoard = document.getElementById("board").textContent;
 console.log (oldBoard);
@@ -195,9 +211,11 @@ if (player === x){
 if (moves === "5")
          {
             if (fivetaken > 0){
+                document.getElementById("invalidMove").style.display = "block";
                 document.getElementById("invalidMove").textContent = "Invalid Move! Space 5 is taken!";
                 document.getElementById("move").value = "";
             }else{
+                document.getElementById("invalidMove").style.display = "none";
                 fivetaken++
         var oldBoard = document.getElementById("board").textContent;
 console.log (oldBoard);
@@ -226,9 +244,11 @@ if (player === x){
 if (moves === "6")
          {
             if (sixtaken > 0){
+                document.getElementById("invalidMove").style.display = "block";
                 document.getElementById("invalidMove").textContent = "Invalid Move! Space 6 is taken!";
                 document.getElementById("move").value = "";
             }else{
+                document.getElementById("invalidMove").style.display = "none";
                 sixtaken++
         var oldBoard = document.getElementById("board").textContent;
 console.log (oldBoard);
@@ -253,9 +273,11 @@ if (player === x){
 if (moves === "7")
          {
             if (seventaken > 0){
+                document.getElementById("invalidMove").style.display = "block";
                 document.getElementById("invalidMove").textContent = "Invalid Move! Space 7 is taken!";
                 document.getElementById("move").value = "";
             }else{
+                document.getElementById("invalidMove").style.display = "none";
                 seventaken++
         var oldBoard = document.getElementById("board").textContent;
 console.log (oldBoard);
@@ -283,9 +305,11 @@ if (player === x){
 if (moves === "8")
          {
             if (eighttaken > 0){
+                document.getElementById("invalidMove").style.display = "block";
                 document.getElementById("invalidMove").textContent = "Invalid Move! Space 1 is taken!";
                 document.getElementById("move").value = "";
             }else{
+                document.getElementById("invalidMove").style.display = "none";
                 eighttaken++
         var oldBoard = document.getElementById("board").textContent;
 console.log (oldBoard);
@@ -309,9 +333,11 @@ if (player === x){
 if (moves === "9")
          {
             if (ninetaken > 0){
+                document.getElementById("invalidMove").style.display = "block";
                 document.getElementById("invalidMove").textContent = "Invalid Move! Space 9 is taken!";
                 document.getElementById("move").value = "";
             }else{
+                document.getElementById("invalidMove").style.display = "none";
                 ninetaken++
         var oldBoard = document.getElementById("board").textContent;
 console.log (oldBoard);
@@ -338,69 +364,122 @@ if (player === x){
      if (xdiag1 > 2){
         document.getElementById("invalidMove").textContent = "Player X Wins!";
         document.getElementById("move").value = "";
+        xwon++
+        document.getElementById("boardResetter").style.display = "block";
+        document.getElementById("invalidMove").style.display = "block";
      }   
      if (xdiag2 > 2){
         document.getElementById("invalidMove").textContent = "Player X Wins!";
         document.getElementById("move").value = "";
+        xwon++
+        document.getElementById("boardResetter").style.display = "block";
+        document.getElementById("invalidMove").style.display = "block";
      }   
      if (xtophor > 2){
         document.getElementById("invalidMove").textContent = "Player X Wins!";
         document.getElementById("move").value = "";
+        xwon++
+        document.getElementById("boardResetter").style.display = "block";
+        document.getElementById("invalidMove").style.display = "block";
      }   
      if (xmidhor > 2){
         document.getElementById("invalidMove").textContent = "Player X Wins!";
         document.getElementById("move").value = "";
+        xwon++
+        document.getElementById("boardResetter").style.display = "block";
+        document.getElementById("invalidMove").style.display = "block";
      }   
      if (xlowhor > 2){
         document.getElementById("invalidMove").textContent = "Player X Wins!";
         document.getElementById("move").value = "";
+        xwon++
+        document.getElementById("boardResetter").style.display = "block";
+        document.getElementById("invalidMove").style.display = "block";
      }   
      if (xleftvert > 2){
         document.getElementById("invalidMove").textContent = "Player X Wins!";
         document.getElementById("move").value = "";
+        xwon++
+        document.getElementById("boardResetter").style.display = "block";
+        document.getElementById("invalidMove").style.display = "block";
      }   
      if (xmidvert > 2){
         document.getElementById("invalidMove").textContent = "Player X Wins!";
         document.getElementById("move").value = "";
+        xwon++
+        document.getElementById("boardResetter").style.display = "block";
+        document.getElementById("invalidMove").style.display = "block";
      }   
      if (xrightvert > 2){
         document.getElementById("invalidMove").textContent = "Player X Wins!";
         document.getElementById("move").value = "";
+        xwon++
+        document.getElementById("boardResetter").style.display = "block";
+        document.getElementById("invalidMove").style.display = "block";
      }   
      if (ydiag1 > 2){
         document.getElementById("invalidMove").textContent = "Player Y Wins!";
         document.getElementById("move").value = "";
+        document.getElementById("boardResetter").style.display = "block";
+        document.getElementById("invalidMove").style.display = "block";
      }   
      if (ydiag2 > 2){
         document.getElementById("invalidMove").textContent = "Player Y Wins!";
         document.getElementById("move").value = "";
+        ywon++
+        document.getElementById("boardResetter").style.display = "block";
+        document.getElementById("invalidMove").style.display = "block";
      }   
      if (ytophor > 2){
         document.getElementById("invalidMove").textContent = "Player Y Wins!";
         document.getElementById("move").value = "";
+        ywon++
+        document.getElementById("boardResetter").style.display = "block";
+        document.getElementById("invalidMove").style.display = "block";
      }   
      if (ymidhor > 2){
         document.getElementById("invalidMove").textContent = "Player Y Wins!";
         document.getElementById("move").value = "";
+        ywon++
+        document.getElementById("boardResetter").style.display = "block";
+        document.getElementById("invalidMove").style.display = "block";
      }   
      if (ylowhor > 2){
         document.getElementById("invalidMove").textContent = "Player Y Wins!";
         document.getElementById("move").value = "";
+        ywon++
+        document.getElementById("boardResetter").style.display = "block";
+        document.getElementById("invalidMove").style.display = "block";
      }   
      if (yleftvert > 2){
         document.getElementById("invalidMove").textContent = "Player Y Wins!";
         document.getElementById("move").value = "";
+        ywon++
+        document.getElementById("boardResetter").style.display = "block";
+        document.getElementById("invalidMove").style.display = "block";
      }   
      if (ymidvert > 2){
         document.getElementById("invalidMove").textContent = "Player Y Wins!";
         document.getElementById("move").value = "";
+        ywon++
+        document.getElementById("boardResetter").style.display = "block";
+        document.getElementById("invalidMove").style.display = "block";
      }   
      if (yrightvert > 2){
         document.getElementById("invalidMove").textContent = "Player Y Wins!";
         document.getElementById("move").value = "";
+        ywon++
+        document.getElementById("boardResetter").style.display = "block";
+        document.getElementById("invalidMove").style.display = "block";
      }  
     }
-    
+    function resetBoard(){
+        document.getElementById("board").textContent = originboard
+        document.getElementById("board").textContent = originboard
+        document.getElementById("boardResetter").style.display = "none";
+        document.getElementById("invalidMove").style.display = "none";
+    }
 
+hideResetBoard;
 </script>
 </html>
