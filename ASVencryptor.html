@@ -1,0 +1,58 @@
+<html>
+    <style>
+        body {
+        background-color: #000000
+        }
+        h1, h2, h3, h4, h5, h6, a, p {
+ color: #00FF00;
+}
+        </style>
+<title>ASV Encryptor</title>
+<center>
+  <h1>ASV Encryptor</h1>
+  <br>
+  <h2>Unencrypted Text</h2>
+  <input placeholder="" style = "color:#00FF00;background-color:#000000; border-color: #00FF00;"type="string" id="unencrypted"></input>
+  <br>
+  <br>
+<button style="height:50px;width:100px;background-color:black;color:rgb(0, 255, 0); border-color: #00FF00;" onclick="encrypt()">Encrypt</button>
+<br>
+<h2>Enncrypted Text</h2>
+<br>
+<font size="50" color="#00ff00" id="encryptedText"></font>
+<br>
+<h2>Enncrypted Text Key</h2>
+<br>
+<font size="50" color="#00ff00" id="encryptedText"></font>
+<br>
+<a href="index.html">Back to My Projects</a>
+</center>
+</html>
+<script>
+var i = 1;
+var num
+var length
+var pubkey
+var privkey = ""
+var possible = ["0","1","2","3","4","5","6","7","8","9","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"," "];
+function encrypt(){
+length = document.getElementById("unencrypted").value;
+length = length.length
+console.log (length)
+createPrivKey(length)
+}
+function createPrivKey(length){
+    console.log (i)
+    console.log (length)
+    if (i <= length){
+    num = Math.floor(Math.random() * 63)
+    privkey = privkey + possible[num]
+    console.log (privkey)
+    i++
+    createPrivKey(length);}
+    else{
+        console.log (privkey)
+        document.getElementById("encryptedText").innerHTML = privkey
+    }
+}
+</script>
