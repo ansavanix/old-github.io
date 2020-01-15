@@ -51,7 +51,7 @@ function createPrivKey(length){
     console.log (length)
     if (i <= length){
     num = Math.floor(Math.random() * 63)
-    privkey = privkey + num
+    privkey = privkey + num + " "
     pubkey = pubkey + possible[num]
     console.log (pubkey)
     i++
