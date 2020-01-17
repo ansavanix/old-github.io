@@ -29,14 +29,68 @@
 </center>
 </html>
 <script>
-var i = 1;
+    var a = 10
+var b = 11
+var c = 12
+var d = 13
+var e = 14
+var f = 15
+var g = 16
+var h = 17
+var i = 18
+var j = 19
+var k = 20
+var l = 21
+var m = 22
+var n = 23
+var o = 24
+var p = 25
+var q = 26
+var r = 27
+var s = 28
+var t = 29
+var u = 30
+var v = 31
+var w = 32
+var x = 33
+var y = 34
+var z = 35
+var A = 36
+var B = 37
+var C = 38
+var D = 39
+var E = 40
+var F = 41
+var G = 42
+var H = 43
+var I = 44
+var J = 45
+var K = 46
+var L = 47
+var M = 48
+var N = 49
+var O = 50
+var P = 51
+var Q = 52
+var R = 53
+var S = 54
+var T = 55
+var U = 56
+var V = 57
+var W = 58
+var X = 59
+var Y = 60
+var Z = 61
+var space = 62
+var info = 1
+
 var num = 0;
 var length
 var privkey = ""
 var pubkey = ""
 var possible = ["0","1","2","3","4","5","6","7","8","9","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","Space"];
 function encrypt(){
-i = 1;
+
 num = 0;
 length
 privkey = ""
@@ -47,14 +101,14 @@ console.log (length)
 createPrivKey(length)
 }
 function createPrivKey(length){
-    console.log (i)
+    console.log (info)
     console.log (length)
-    if (i <= length){
+    if (info <= length){
     num = Math.floor(Math.random() * 63)
     privkey = privkey + num + " "
     pubkey = pubkey + possible[num]
     console.log (pubkey)
-    i++
+    info++
     createPrivKey(length);}
     else{
         console.log (pubkey)
