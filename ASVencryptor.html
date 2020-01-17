@@ -90,8 +90,8 @@ bruh = 0;
 var letnum;
 var privkey = ""
 var pubkey = ""
-var possible = ["0","1","2","3","4","5","6","7","8","9","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","Space"];
-var privPossible = [0,1,2,3,4,5,6,7,8,9,a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z,Space];
+var possible = ["0","1","2","3","4","5","6","7","8","9","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z",];
+var privPossible = [0,1,2,3,4,5,6,7,8,9,a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z,62];
 function encrypt(){
 var privnum;
 num = 0;
@@ -101,6 +101,7 @@ pubkey = ""
 word = document.getElementById("unencrypted").value;
 length = document.getElementById("unencrypted").value;
 length = length.length
+console.log (privPossible[0])
 console.log (length)
 console.log (word)
 createPrivKey(length)
@@ -233,9 +234,9 @@ privnum = 58
 privnum = 59
         }else if (word.charAt(bruh) === "Y"){
 privnum = 60
-        }else if (word.charAt(bruh) === "X"){
-privnum = 61
         }else if (word.charAt(bruh) === "Z"){
+privnum = 61
+        }else if (word.charAt(bruh) === " "){
 privnum = 62
         }
 
