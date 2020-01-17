@@ -7,9 +7,9 @@
  color: #00FF00;
 }
         </style>
-<title>ASV62 Encryptor</title>
+<title>ASV63 Encryptor</title>
 <center>
-  <h1>ASV62 Encryptor</h1>
+  <h1>ASV63 Encryptor</h1>
   <br>
   <h2>Unencrypted Text</h2>
   <input placeholder="" style = "color:#00FF00;background-color:#000000; border-color: #00FF00;"type="string" id="unencrypted"></input>
@@ -93,7 +93,7 @@ var pubkey = ""
 var possible = ["0","1","2","3","4","5","6","7","8","9","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","Space"];
 var privPossible = [0,1,2,3,4,5,6,7,8,9,a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z,Space];
 function encrypt(){
-
+var privnum;
 num = 0;
 length
 privkey = ""
@@ -109,12 +109,19 @@ function createPrivKey(length){
     console.log (info)
     console.log (length)
     if (info <= length){
-        letNum = word.charAt(bruh)
-        console.log (letNum)
+        if (word.charAt(bruh) === "1"){
+privnum = 1
+        } else if (word.charAt(bruh) === "2"){
+privnum = 2
+        }else if (word.charAt(bruh) === "3"){
+privnum = 3
+        }else if (word.charAt(bruh) === "4"){
+privnum = 4
+        }
+       
         
         bruh++
     num = Math.floor(Math.random() * 63)
-    privNum = privPossible[letNum]
     privkey = privkey + num + " "
     pubkey = pubkey + possible[num]
     letnum = letnum - possible[num]
