@@ -19,11 +19,19 @@
 <br>
 <h2>Enncrypted Text</h2>
 <br>
+<pre>
+    <center>
 <font size="50" color="#00ff00" id="encryptedText"></font>
+</center>
+</pre>
 <br>
 <h2>Enncrypted Text Key</h2>
 <br>
+<pre>
+    <center>
 <font size="50" color="#00ff00" id="encryptedTextKey"></font>
+</center>
+</pre>
 <br>
 <a href="index.html">Back to My Projects</a>
 </center>
@@ -81,17 +89,17 @@ var W = 58
 var X = 59
 var Y = 60
 var Z = 61
-var Space = 62
+var _ = 62
 var info = 1
 var word;
 var num = 0;
 var length
-bruh = 0;
+var bruh = 0;
 var letnum;
 var privkey = ""
 var pubkey = ""
-var possible = ["0","1","2","3","4","5","6","7","8","9","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z",];
-var privPossible = [0,1,2,3,4,5,6,7,8,9,a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z,62];
+var possible = ["0","1","2","3","4","5","6","7","8","9","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"," "];
+var privPossible = [0,1,2,3,4,5,6,7,8,9,a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z,_];
 function encrypt(){
 var privnum;
 var numnum;
@@ -248,16 +256,26 @@ privnum = 62
     numnum = privnum - num;
     privkey = privkey + numnum + " "
     pubkey = pubkey + possible[num]
-    letnum = letnum - possible[num]
-    console.log(letnum + "hope")
     console.log (word)
     console.log (pubkey)
+    console.log (privkey)
     info++
     createPrivKey(length);}
     else{
         console.log (pubkey)
+        pubkey = pubkey.replace(" ","_")
         document.getElementById("encryptedText").innerHTML = pubkey
         document.getElementById("encryptedTextKey").innerHTML = privkey
+        info = 1
+ word;
+ num = 0;
+ length
+ bruh = 0;
+ letnum;
+ privkey = ""
+ pubkey = ""
+ privnum;
+ numnum;
     }
 }
 </script>
