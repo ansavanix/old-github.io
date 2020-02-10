@@ -1,27 +1,27 @@
 # EgomaniacDev WebProjects
 <br>
 <h1> An assortnment of web based tools. </h1>
-<h2>D20</h2>
+<h1>D20</h1>
 <BR> 
-  D20.html is a normal 20 sided dice with no tricks up its sleeve.
+<h2>  D20.html is a normal 20 sided dice with no tricks up its sleeve.
 <br>
-  Favorable odds always produces a number above 1.
+ <h2>  Favorable odds always produces a number above 1.<h2> 
 <br>
-  Unfavorable odds always produces a number below 20.
+  <h2> Unfavorable odds always produces a number below 20.<h2> 
   <br>
-  <h2>Games</h2>
+  <h1>Games</h1>
   <br>
-  Tic-Tac-Toe
+  <h2> Tic-Tac-Toe<h2> 
   <br>
-  <h2>Math</h2>
+  <h1>Math</h1>
   <br>
-  Distance finder finds the distance between two points on an xy coordinate plane.
+  <h2> Distance finder finds the distance between two points on an xy coordinate plane.<h2> 
   <br>
-  <h2>Tools<h2>
+  <h1>Tools<h1>
    <br>
-<p>RDP Enabler is a script to enable RDP through AutoHotKey.
+<h2> RDP Enabler is a script to enable RDP through AutoHotKey.<h2> 
  <br>
-LAN Checker uses a WebRTC exploit to find your local ipv4 address.<p>
+LAN Checker uses a WebRTC exploit to find your local ipv4 address.<h2> 
    
   
   
