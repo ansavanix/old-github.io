@@ -19,8 +19,7 @@
   <br>
   <h1>Tools<h1>
    <br>
-<h2> RDP Enabler is a script to enable RDP through AutoHotKey.<h2> 
- <br>
+   <h2>
 LAN Checker uses a WebRTC exploit to find your local ipv4 address.<h2> 
    
   
