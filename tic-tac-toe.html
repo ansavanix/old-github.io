@@ -393,47 +393,47 @@ if (xdiag1 > 2){
      }   
      if (xdiag2 > 2){
         winAnnouncer("X")
-updateScoreboard()
+        updateScoreboard()
      }   
      if (xtophor > 2){
         winAnnouncer("X")
-updateScoreboard()
+        updateScoreboard()
      }   
      if (xmidhor > 2){
         winAnnouncer("X")
-updateScoreboard()
+        updateScoreboard()
      }   
      if (xlowhor > 2){
         winAnnouncer("X")
-updateScoreboard()
+        updateScoreboard()
      }   
      if (xleftvert > 2){
         winAnnouncer("X")
-updateScoreboard()
+        updateScoreboard()
      }   
      if (xmidvert > 2){
         winAnnouncer("X")
-updateScoreboard()
+        updateScoreboard()
      }   
      if (xrightvert > 2){
         winAnnouncer("X")
-updateScoreboard()
+        updateScoreboard()
      }   
      if (ydiag1 > 2){
-winAnnouncer("Y")
-updateScoreboard()
+        winAnnouncer("Y")
+        updateScoreboard()
      }   
      if (ydiag2 > 2){
         winAnnouncer("Y")
-updateScoreboard()
+        updateScoreboard()
      }   
      if (ytophor > 2){
         winAnnouncer("Y")
-updateScoreboard()
+        updateScoreboard()
      }   
      if (ymidhor > 2){
         winAnnouncer("Y")
-updateScoreboard()
+        updateScoreboard()
      }   
      if (ylowhor > 2){
         winAnnouncer("Y")
@@ -460,6 +460,7 @@ updateScoreboard()
         document.getElementById("invalidMove").style.display = "block";
         }}
     function resetBoard(){
+        lockBoardState()
         document.getElementById("board").textContent = originboard
         document.getElementById("board").textContent = originboard
         document.getElementById("boardResetter").style.display = "none";
