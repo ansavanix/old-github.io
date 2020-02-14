@@ -485,7 +485,7 @@ document.getElementById("scoreboard").innerHTML = newScoreBoard;
 console.log (oldScoreBoard);
 var xwonstring = xwon.toString
 var ywonstring = ywon.toString
-var newScoreBoard = oldScoreBoard.replace("Y:0", "Y:"+ywon)
+var newScoreBoard = "Player X:"+xwon +"         "     +   "Player Y:"+ywon
 console.log (newScoreBoard)
 document.getElementById("scoreboard").innerHTML = newScoreBoard;
      }   
@@ -499,7 +499,7 @@ document.getElementById("scoreboard").innerHTML = newScoreBoard;
 console.log (oldScoreBoard);
 var xwonstring = xwon.toString
 var ywonstring = ywon.toString
-var newScoreBoard = oldScoreBoard.replace("Y:0", "Y:"+ywon)
+var newScoreBoard = "Player X:"+xwon +"         "     +   "Player Y:"+ywon
 console.log (newScoreBoard)
 document.getElementById("scoreboard").innerHTML = newScoreBoard;
      }   
@@ -513,7 +513,7 @@ document.getElementById("scoreboard").innerHTML = newScoreBoard;
 console.log (oldScoreBoard);
 var xwonstring = xwon.toString
 var ywonstring = ywon.toString
-var newScoreBoard = oldScoreBoard.replace("Y:0", "Y:"+ywon)
+var newScoreBoard = "Player X:"+xwon +"         "     +   "Player Y:"+ywon
 console.log (newScoreBoard)
 document.getElementById("scoreboard").innerHTML = newScoreBoard;
      }   
@@ -527,7 +527,7 @@ document.getElementById("scoreboard").innerHTML = newScoreBoard;
 console.log (oldScoreBoard);
 var xwonstring = xwon.toString
 var ywonstring = ywon.toString
-var newScoreBoard = oldScoreBoard.replace("Y:0", "Y:"+ywon)
+var newScoreBoard = "Player X:"+xwon +"         "     +   "Player Y:"+ywon
 console.log (newScoreBoard)
 document.getElementById("scoreboard").innerHTML = newScoreBoard;
      }   
@@ -537,6 +537,14 @@ document.getElementById("scoreboard").innerHTML = newScoreBoard;
         ywon++
         document.getElementById("boardResetter").style.display = "block";
         document.getElementById("invalidMove").style.display = "block";
+        var oldScoreBoard = document.getElementById("scoreboard").textContent;
+console.log (oldScoreBoard);
+var xwonstring = xwon.toString
+var ywonstring = ywon.toString
+var newScoreBoard = "Player X:"+xwon +"         "     +   "Player Y:"+ywon
+console.log (newScoreBoard)
+document.getElementById("scoreboard").innerHTML = newScoreBoard;
+        
      }   
      if (yleftvert > 2){
         document.getElementById("invalidMove").textContent = "Player Y Wins!";
@@ -544,6 +552,13 @@ document.getElementById("scoreboard").innerHTML = newScoreBoard;
         ywon++
         document.getElementById("boardResetter").style.display = "block";
         document.getElementById("invalidMove").style.display = "block";
+        var oldScoreBoard = document.getElementById("scoreboard").textContent;
+console.log (oldScoreBoard);
+var xwonstring = xwon.toString
+var ywonstring = ywon.toString
+var newScoreBoard = "Player X:"+xwon +"         "     +   "Player Y:"+ywon
+console.log (newScoreBoard)
+document.getElementById("scoreboard").innerHTML = newScoreBoard;
      }   
      if (ymidvert > 2){
         document.getElementById("invalidMove").textContent = "Player Y Wins!";
@@ -551,6 +566,13 @@ document.getElementById("scoreboard").innerHTML = newScoreBoard;
         ywon++
         document.getElementById("boardResetter").style.display = "block";
         document.getElementById("invalidMove").style.display = "block";
+        var oldScoreBoard = document.getElementById("scoreboard").textContent;
+console.log (oldScoreBoard);
+var xwonstring = xwon.toString
+var ywonstring = ywon.toString
+var newScoreBoard = "Player X:"+xwon +"         "     +   "Player Y:"+ywon
+console.log (newScoreBoard)
+document.getElementById("scoreboard").innerHTML = newScoreBoard;
      }   
      if (yrightvert > 2){
         document.getElementById("invalidMove").textContent = "Player Y Wins!";
@@ -558,6 +580,13 @@ document.getElementById("scoreboard").innerHTML = newScoreBoard;
         ywon++
         document.getElementById("boardResetter").style.display = "block";
         document.getElementById("invalidMove").style.display = "block";
+        var oldScoreBoard = document.getElementById("scoreboard").textContent;
+console.log (oldScoreBoard);
+var xwonstring = xwon.toString
+var ywonstring = ywon.toString
+var newScoreBoard = "Player X:"+xwon +"         "     +   "Player Y:"+ywon
+console.log (newScoreBoard)
+document.getElementById("scoreboard").innerHTML = newScoreBoard;
        
      }  
      if (onetaken > 0){
