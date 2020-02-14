@@ -384,7 +384,74 @@ if (player === x){
     }
     document.getElementById("invalidMove").textContent = "";
     document.getElementById("move").value = "";
+    
 }}
+if (xdiag1 > 2){
+        winAnnouncer("X")
+        updateScoreboard()
+
+     }   
+     if (xdiag2 > 2){
+        winAnnouncer("X")
+updateScoreboard()
+     }   
+     if (xtophor > 2){
+        winAnnouncer("X")
+updateScoreboard()
+     }   
+     if (xmidhor > 2){
+        winAnnouncer("X")
+updateScoreboard()
+     }   
+     if (xlowhor > 2){
+        winAnnouncer("X")
+updateScoreboard()
+     }   
+     if (xleftvert > 2){
+        winAnnouncer("X")
+updateScoreboard()
+     }   
+     if (xmidvert > 2){
+        winAnnouncer("X")
+updateScoreboard()
+     }   
+     if (xrightvert > 2){
+        winAnnouncer("X")
+updateScoreboard()
+     }   
+     if (ydiag1 > 2){
+winAnnouncer("Y")
+updateScoreboard()
+     }   
+     if (ydiag2 > 2){
+        winAnnouncer("Y")
+updateScoreboard()
+     }   
+     if (ytophor > 2){
+        winAnnouncer("Y")
+updateScoreboard()
+     }   
+     if (ymidhor > 2){
+        winAnnouncer("Y")
+updateScoreboard()
+     }   
+     if (ylowhor > 2){
+        winAnnouncer("Y")
+        updateScoreboard()
+     }   
+     if (yleftvert > 2){
+        winAnnouncer("Y")
+        updateScoreboard()
+     }   
+     if (ymidvert > 2){
+        winAnnouncer("Y")
+        updateScoreboard()
+     }   
+     if (yrightvert > 2){
+        winAnnouncer("Y")
+        updateScoreboard()
+
+     }  
 
      if (onetaken > 0 && twotaken > 0 && threetaken > 0 && fourtaken > 0 && fivetaken > 0 && sixtaken > 0 && seventaken > 0 && eighttaken > 0 && ninetaken > 0){
         document.getElementById("invalidMove").textContent = "Draw!";
