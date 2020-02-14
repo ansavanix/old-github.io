@@ -77,7 +77,7 @@
         var ywon = 0;
         var xwonstring = xwon.toString;
         var ywonstring = ywon.toString;
-        
+        var locked = 0
         document.getElementById("boardResetter").style.display = "none";
         document.getElementById("invalidMove").style.display = "none";
         function updateScoreboard(){
@@ -385,87 +385,13 @@ if (player === x){
     document.getElementById("invalidMove").textContent = "";
     document.getElementById("move").value = "";
 }}
-     if (xdiag1 > 2){
-        winAnnouncer("X")
-        updateScoreboard()
-        
-     }   
-     if (xdiag2 > 2){
-        winAnnouncer("X")
-updateScoreboard()
-     }   
-     if (xtophor > 2){
-        winAnnouncer("X")
-updateScoreboard()
-     }   
-     if (xmidhor > 2){
-        winAnnouncer("X")
-updateScoreboard()
-     }   
-     if (xlowhor > 2){
-        winAnnouncer("X")
-updateScoreboard()
-     }   
-     if (xleftvert > 2){
-        winAnnouncer("X")
-updateScoreboard()
-     }   
-     if (xmidvert > 2){
-        winAnnouncer("X")
-updateScoreboard()
-     }   
-     if (xrightvert > 2){
-        winAnnouncer("X")
-updateScoreboard()
-     }   
-     if (ydiag1 > 2){
-winAnnouncer("Y")
-updateScoreboard()
-     }   
-     if (ydiag2 > 2){
-        winAnnouncer("Y")
-updateScoreboard()
-     }   
-     if (ytophor > 2){
-        winAnnouncer("Y")
-updateScoreboard()
-     }   
-     if (ymidhor > 2){
-        winAnnouncer("Y")
-updateScoreboard()
-     }   
-     if (ylowhor > 2){
-        winAnnouncer("Y")
-        updateScoreboard()
-     }   
-     if (yleftvert > 2){
-        winAnnouncer("Y")
-        updateScoreboard()
-     }   
-     if (ymidvert > 2){
-        winAnnouncer("Y")
-        updateScoreboard()
-     }   
-     if (yrightvert > 2){
-        winAnnouncer("Y")
-        updateScoreboard()
-       
-     }  
-     if (onetaken > 0){
-        if (twotaken > 0){
-            if (threetaken > 0){
-                if (fourtaken > 0){
-                    if (fivetaken > 0){
-                        if (sixtaken > 0){
-                            if (seventaken > 0){
-                                if (eighttaken > 0){
-                                    if (ninetaken > 0){
+
+     if (onetaken > 0 && twotaken > 0 && threetaken > 0 && fourtaken > 0 && fivetaken > 0 && sixtaken > 0 && seventaken > 0 && eighttaken > 0 && ninetaken > 0){
         document.getElementById("invalidMove").textContent = "Draw!";
         document.getElementById("move").value = "";
         document.getElementById("boardResetter").style.display = "block";
         document.getElementById("invalidMove").style.display = "block";
-            
-        }}}}}}}}}}
+        }}
     function resetBoard(){
         document.getElementById("board").textContent = originboard
         document.getElementById("board").textContent = originboard
@@ -496,6 +422,13 @@ updateScoreboard()
         seventaken = 0;
         eighttaken = 0;
         ninetaken = 0;
+    }
+    function lockBoardState(){
+if (locked == 1){
+    locked = 0
+}else{
+    locked = 1
+}
     }
 </script>
 </html>
