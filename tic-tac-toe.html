@@ -80,6 +80,26 @@
         
         document.getElementById("boardResetter").style.display = "none";
         document.getElementById("invalidMove").style.display = "none";
+        function updateScoreboard(){
+        var oldScoreBoard = document.getElementById("scoreboard").textContent;
+        console.log (oldScoreBoard);
+        xwonstring = xwon.toString
+        ywonstring = ywon.toString
+        var newScoreBoard = "Player X:"+xwon +"         "     +   "Player Y:"+ywon
+        console.log (newScoreBoard)
+        document.getElementById("scoreboard").innerHTML = newScoreBoard;
+    }
+    function winAnnouncer(player){
+        document.getElementById("invalidMove").textContent = "Player " + player + " Wins!";
+        document.getElementById("move").value = "";
+        if (player == "Y"){
+            ywon++ 
+        }else{
+            xwon++
+        }
+        document.getElementById("boardResetter").style.display = "block";
+        document.getElementById("invalidMove").style.display = "block";
+    }
     function test()
     {
         var moves = document.getElementById("move").value;
@@ -116,6 +136,7 @@ if (player === x){
         console.log (player)
         document.getElementById("turn").innerHTML = "Player X Go (1-9)";
         ydiag1++
+        yleftvert++
         ytophor++
     }
     document.getElementById("invalidMove").textContent = "";
@@ -365,68 +386,68 @@ if (player === x){
     document.getElementById("move").value = "";
 }}
      if (xdiag1 > 2){
-        winAnnoucer("X")
-updateScoreboard()
+        winAnnouncer("X")
+        updateScoreboard()
         
      }   
      if (xdiag2 > 2){
-        winAnnoucer("X")
+        winAnnouncer("X")
 updateScoreboard()
      }   
      if (xtophor > 2){
-        winAnnoucer("X")
+        winAnnouncer("X")
 updateScoreboard()
      }   
      if (xmidhor > 2){
-        winAnnoucer("X")
+        winAnnouncer("X")
 updateScoreboard()
      }   
      if (xlowhor > 2){
-        winAnnoucer("X")
+        winAnnouncer("X")
 updateScoreboard()
      }   
      if (xleftvert > 2){
-        winAnnoucer("X")
+        winAnnouncer("X")
 updateScoreboard()
      }   
      if (xmidvert > 2){
-        winAnnoucer("X")
+        winAnnouncer("X")
 updateScoreboard()
      }   
      if (xrightvert > 2){
-        winAnnoucer("X")
+        winAnnouncer("X")
 updateScoreboard()
      }   
      if (ydiag1 > 2){
-winAnnoucer("Y")
+winAnnouncer("Y")
 updateScoreboard()
      }   
      if (ydiag2 > 2){
-        winAnnoucer("Y")
+        winAnnouncer("Y")
 updateScoreboard()
      }   
      if (ytophor > 2){
-        winAnnoucer("Y")
+        winAnnouncer("Y")
 updateScoreboard()
      }   
      if (ymidhor > 2){
-        winAnnoucer("Y")
+        winAnnouncer("Y")
 updateScoreboard()
      }   
      if (ylowhor > 2){
-        winAnnoucer("Y")
+        winAnnouncer("Y")
         updateScoreboard()
      }   
      if (yleftvert > 2){
-        winAnnoucer("Y")
+        winAnnouncer("Y")
         updateScoreboard()
      }   
      if (ymidvert > 2){
-        winAnnoucer("Y")
+        winAnnouncer("Y")
         updateScoreboard()
      }   
      if (yrightvert > 2){
-        winAnnoucer("Y")
+        winAnnouncer("Y")
         updateScoreboard()
        
      }  
@@ -444,16 +465,7 @@ updateScoreboard()
         document.getElementById("boardResetter").style.display = "block";
         document.getElementById("invalidMove").style.display = "block";
             
-        }
-        } 
-        }   
-        }  
-        }
-        }
-        }
-        }
-        }
-    }
+        }}}}}}}}}}
     function resetBoard(){
         document.getElementById("board").textContent = originboard
         document.getElementById("board").textContent = originboard
@@ -485,27 +497,5 @@ updateScoreboard()
         eighttaken = 0;
         ninetaken = 0;
     }
-    function updateScoreboard(){
-        var oldScoreBoard = document.getElementById("scoreboard").textContent;
-        console.log (oldScoreBoard);
-        xwonstring = xwon.toString
-        ywonstring = ywon.toString
-        var newScoreBoard = "Player X:"+xwon +"         "     +   "Player Y:"+ywon
-        console.log (newScoreBoard)
-        document.getElementById("scoreboard").innerHTML = newScoreBoard;
-    }
-    function winAnnouncer(player){
-        document.getElementById("invalidMove").textContent = "Player " + player + " Wins!";
-        document.getElementById("move").value = "";
-        if (player == "Y"){
-            ywon++ 
-        }else{
-            xwon++
-        }
-        document.getElementById("boardResetter").style.display = "block";
-        document.getElementById("invalidMove").style.display = "block";
-    }
-
-
 </script>
 </html>
