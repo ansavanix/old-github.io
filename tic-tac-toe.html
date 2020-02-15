@@ -77,7 +77,7 @@
         var ywon = 0;
         var xwonstring = xwon.toString;
         var ywonstring = ywon.toString;
-        var locked = 0
+        var locked = "false"
         document.getElementById("boardResetter").style.display = "none";
         document.getElementById("invalidMove").style.display = "none";
         function updateScoreboard(){
@@ -90,6 +90,7 @@
         document.getElementById("scoreboard").innerHTML = newScoreBoard;
     }
     function winAnnouncer(player){
+        lockBoardState()
         document.getElementById("invalidMove").textContent = "Player " + player + " Wins!";
         document.getElementById("move").value = "";
         if (player == "Y"){
@@ -112,6 +113,11 @@
         document.getElementById("invalidMove").textContent = "Invalid Move! Choose a space 1-9.";
         document.getElementById("move").value = "";
     } 
+    if (locked == "true"){
+        document.getElementById("invalidMove").style.display = "block";
+        document.getElementById("invalidMove").textContent = "Board is locked! Reset board to start a new round.";
+        document.getElementById("move").value = "";
+    }else{
         if (moves === "1"){
             if (onetaken > 0){
                 document.getElementById("invalidMove").style.display = "block";
@@ -385,7 +391,8 @@ if (player === x){
     document.getElementById("invalidMove").textContent = "";
     document.getElementById("move").value = "";
     
-}}
+}}}
+if (locked == "false"){
 if (xdiag1 > 2){
         winAnnouncer("X")
         updateScoreboard()
@@ -451,7 +458,7 @@ if (xdiag1 > 2){
         winAnnouncer("Y")
         updateScoreboard()
 
-     }  
+     } }
 
      if (onetaken > 0 && twotaken > 0 && threetaken > 0 && fourtaken > 0 && fivetaken > 0 && sixtaken > 0 && seventaken > 0 && eighttaken > 0 && ninetaken > 0){
         document.getElementById("invalidMove").textContent = "Draw!";
@@ -492,10 +499,10 @@ if (xdiag1 > 2){
         ninetaken = 0;
     }
     function lockBoardState(){
-if (locked == 1){
-    locked = 0
+if (locked == "false"){
+    locked = "true"
 }else{
-    locked = 1
+    locked = "false"
 }
     }
 </script>
