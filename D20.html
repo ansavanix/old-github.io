@@ -14,6 +14,14 @@
 <br>
 <font size="50" color="#00ff00" id="insertD20"></font>
 <br>
+<h2>Choose Mode</h2>
+<p>Current: Normal</p>
+<button style="height:50px;width:100px;background-color:black;color:rgb(0, 255, 0); border-color: #00FF00;" onclick="changeState(Unfavor)">Unfavorable</button>
+<button style="height:50px;width:100px;background-color:black;color:rgb(0, 255, 0); border-color: #00FF00;" onclick="changeState(Normal)">Normal</button>
+<button style="height:50px;width:100px;background-color:black;color:rgb(0, 255, 0); border-color: #00FF00;" onclick="favor()">Favorable</button>
+<br>
+<button style="height:50px;width:100px;background-color:black;color:rgb(0, 255, 0); border-color: #00FF00;" onclick="hide()">Hide Modes</button>
+<br>
 <a href="index.html">Back to My Projects</a>
 </center>
 </html>
@@ -24,5 +32,6 @@
     var insertedTextD20 = (d20Part1 + d20Part2);
     document.getElementById("insertD20").innerHTML = insertedTextD20;
   }
+  
 </script>
 
