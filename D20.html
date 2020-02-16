@@ -21,23 +21,66 @@
 <br>
 <font size="50" color="#00ff00" id="insertD20"></font>
 <br>
-<h2>Choose Mode</h2>
-<p>Current: Normal</p>
-<button style="height:50px;width:100px;background-color:black;color:rgb(0, 255, 0); border-color: #00FF00;" onclick="changeState(Unfavor)">Unfavorable</button>
-<button style="height:50px;width:100px;background-color:black;color:rgb(0, 255, 0); border-color: #00FF00;" onclick="changeState(Normal)">Normal</button>
-<button style="height:50px;width:100px;background-color:black;color:rgb(0, 255, 0); border-color: #00FF00;" onclick="favor()">Favorable</button>
+<h2 id='chm'>Choose Mode</h2>
+<p id='cm'>Current: Normal</p>
+<button id='uf'style="height:50px;width:100px;background-color:black;color:rgb(0, 255, 0); border-color: #00FF00;" onclick="changeState('Unfavor')">Unfavorable</button>
+<button id='n'style="height:50px;width:100px;background-color:black;color:rgb(0, 255, 0); border-color: #00FF00;" onclick="changeState('Normal')">Normal</button>
+<button id='f'style="height:50px;width:100px;background-color:black;color:rgb(0, 255, 0); border-color: #00FF00;" onclick="changeState('Favor')">Favorable</button>
 <br>
-<button style="height:50px;width:100px;background-color:black;color:rgb(0, 255, 0); border-color: #00FF00;" onclick="hide()">Hide Modes</button>
+<button id='hm'style="height:50px;width:100px;background-color:black;color:rgb(0, 255, 0); border-color: #00FF00;" onclick="hide()">Hide Modes</button>
 <br>
 <a href="index.html">Back to My Projects</a>
 </center>
 </html>
 <script>
+  var mode = 0
+
+  function hide(){
+    document.getElementById("chm").style.display = "none";
+    document.getElementById("cm").style.display = "none";
+    document.getElementById("hm").style.display = "none";
+    document.getElementById("uf").style.display = "none";
+    document.getElementById("f").style.display = "none";
+    document.getElementById("n").style.display = "none";
+  }
+  function changeState(state){
+    if (state == "Unfavor"){
+      mode = -1
+      document.getElementById("cm").textContent = "Current: Unfavorable";
+    }else if (state =="Favor"){
+      mode = 1
+      document.getElementById("cm").textContent = "Current: Favorable";
+    }else{
+      mode = 0
+      document.getElementById("cm").textContent = "Current: Normal";
+    }
+  }
   function rollD20(){
+    if (mode == 0){
     var d20Part1 = Math.floor(Math.random() * 10) + 1;
     var d20Part2 = Math.floor(Math.random() * 11);
     var insertedTextD20 = (d20Part1 + d20Part2);
     document.getElementById("insertD20").innerHTML = insertedTextD20;
+    }else if (mode == 1){
+      var d20Part1 = Math.floor(Math.random() * 10) + 1;
+    var d20Part2 = Math.floor(Math.random() * 11);
+    var insertedTextD20 = (d20Part1 + d20Part2);
+  
+    if (insertedTextD20 === 1){
+     insertedTextD20 = 20 
+  }
+      document.getElementById("insertD20").innerHTML = insertedTextD20;
+    }else{
+      var d20Part1 = Math.floor(Math.random() * 10) + 1;
+    var d20Part2 = Math.floor(Math.random() * 11);
+    var insertedTextD20 = (d20Part1 + d20Part2);
+  
+    if (insertedTextD20 === 20){
+    insertedTextD20 = 1
+  }
+      document.getElementById("insertD20").innerHTML = insertedTextD20;
+    }
+
   }
   
 </script>
