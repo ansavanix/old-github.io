@@ -81,38 +81,22 @@
         var locked = "false"
         document.getElementById("boardResetter").style.display = "none";
         document.getElementById("invalidMove").style.display = "none";
-        function updateScoreboard(){
-        var oldScoreBoard = document.getElementById("scoreboard").textContent;
-        console.log (oldScoreBoard);
-        xwonstring = xwon.toString
-        ywonstring = ywon.toString
-        var newScoreBoard = "Player X:"+xwon +"         "     +   "Player Y:"+ywon
-        console.log (newScoreBoard)
-        document.getElementById("scoreboard").innerHTML = newScoreBoard;
-    }
-    function winAnnouncer(player){
-        lockBoardState()
-        document.getElementById("invalidMove").textContent = "Player " + player + " Wins!";
-        document.getElementById("move").value = "";
-        if (player == "Y"){
-            ywon++ 
-        }else{
-            xwon++
-        }
-        document.getElementById("boardResetter").style.display = "block";
-        document.getElementById("invalidMove").style.display = "block";
-    }
+        
+
+        document.getElementById('move').onkeydown = function(key){
+   if(key.keyCode == 13){
+     test();
+   }
+};
     function test()
     {
         var moves = document.getElementById("move").value;
     console.log (moves)
     if (moves > 9){
-        document.getElementById("invalidMove").textContent = "Invalid Move! Choose a space 1-9.";
-        document.getElementById("move").value = "";
+     invalidMove();
     }
     if (moves < 1){
-        document.getElementById("invalidMove").textContent = "Invalid Move! Choose a space 1-9.";
-        document.getElementById("move").value = "";
+        invalidMove();
     } 
     if (locked == "true"){
         document.getElementById("invalidMove").style.display = "block";
@@ -121,9 +105,7 @@
     }else{
         if (moves === "1"){
             if (onetaken > 0){
-                document.getElementById("invalidMove").style.display = "block";
-                document.getElementById("invalidMove").textContent = "Invalid Move! Space 1 is taken!";
-                document.getElementById("move").value = "";
+            taken("1")
             }else{
                 document.getElementById("invalidMove").style.display = "none";
                 onetaken++
@@ -152,9 +134,7 @@ if (player === x){
     
     if (moves === "2"){
         if (twotaken > 0){
-            document.getElementById("invalidMove").style.display = "block";
-                document.getElementById("invalidMove").textContent = "Invalid Move! Space 2 is taken!";
-                document.getElementById("move").value = "";
+            taken("2");
             }else{
                 document.getElementById("invalidMove").style.display = "none";
                 twotaken++
@@ -181,9 +161,7 @@ if (player === x){
 if (moves === "3")
          {
             if (threetaken > 0){
-                document.getElementById("invalidMove").style.display = "block";
-                document.getElementById("invalidMove").textContent = "Invalid Move! Space 3 is taken!";
-                document.getElementById("move").value = "";
+                taken("3")
             }else{
                 document.getElementById("invalidMove").style.display = "none";
                 threetaken++
@@ -212,9 +190,7 @@ ydiag2++
 if (moves === "4")
          {
             if (fourtaken > 0){
-                document.getElementById("invalidMove").style.display = "block";
-                document.getElementById("invalidMove").textContent = "Invalid Move! Space 4 is taken!";
-                document.getElementById("move").value = "";
+                taken("4")
             }else{
                 document.getElementById("invalidMove").style.display = "none";
                 fourtaken++
@@ -241,9 +217,7 @@ if (player === x){
 if (moves === "5")
          {
             if (fivetaken > 0){
-                document.getElementById("invalidMove").style.display = "block";
-                document.getElementById("invalidMove").textContent = "Invalid Move! Space 5 is taken!";
-                document.getElementById("move").value = "";
+                taken("5")
             }else{
                 document.getElementById("invalidMove").style.display = "none";
                 fivetaken++
@@ -274,9 +248,7 @@ if (player === x){
 if (moves === "6")
          {
             if (sixtaken > 0){
-                document.getElementById("invalidMove").style.display = "block";
-                document.getElementById("invalidMove").textContent = "Invalid Move! Space 6 is taken!";
-                document.getElementById("move").value = "";
+                taken("6")
             }else{
                 document.getElementById("invalidMove").style.display = "none";
                 sixtaken++
@@ -303,9 +275,7 @@ if (player === x){
 if (moves === "7")
          {
             if (seventaken > 0){
-                document.getElementById("invalidMove").style.display = "block";
-                document.getElementById("invalidMove").textContent = "Invalid Move! Space 7 is taken!";
-                document.getElementById("move").value = "";
+                taken("7")
             }else{
                 document.getElementById("invalidMove").style.display = "none";
                 seventaken++
@@ -335,9 +305,7 @@ if (player === x){
 if (moves === "8")
          {
             if (eighttaken > 0){
-                document.getElementById("invalidMove").style.display = "block";
-                document.getElementById("invalidMove").textContent = "Invalid Move! Space 1 is taken!";
-                document.getElementById("move").value = "";
+                taken("8")
             }else{
                 document.getElementById("invalidMove").style.display = "none";
                 eighttaken++
@@ -364,9 +332,7 @@ if (player === x){
 if (moves === "9")
          {
             if (ninetaken > 0){
-                document.getElementById("invalidMove").style.display = "block";
-                document.getElementById("invalidMove").textContent = "Invalid Move! Space 9 is taken!";
-                document.getElementById("move").value = "";
+                taken("9")
             }else{
                 document.getElementById("invalidMove").style.display = "none";
                 ninetaken++
@@ -393,8 +359,80 @@ if (player === x){
     document.getElementById("move").value = "";
     
 }}}
+    checkGameState();
+        }
+    function resetBoard(){
+        lockBoardState()
+        document.getElementById("board").textContent = originboard
+        document.getElementById("board").textContent = originboard
+        document.getElementById("boardResetter").style.display = "none";
+        document.getElementById("invalidMove").style.display = "none";
+        xleftvert = 0;
+        xmidvert = 0;
+        xrightvert = 0;
+        xtophor = 0;
+        xmidhor = 0;
+        xlowhor = 0;
+        xdiag1 = 0;
+        xdiag2 = 0;
+        yleftvert = 0;
+        ymidvert = 0;
+        yrightvert = 0;
+        ytophor = 0;
+        ymidhor = 0;
+        ylowhor = 0;
+        ydiag1 = 0;
+        ydiag2 = 0;
+        onetaken = 0;
+        twotaken = 0;
+        threetaken = 0;
+        fourtaken = 0;
+        fivetaken = 0;
+        sixtaken = 0;
+        seventaken = 0;
+        eighttaken = 0;
+        ninetaken = 0;
+    }
+    function lockBoardState(){
 if (locked == "false"){
-if (xdiag1 > 2){
+    locked = "true"
+}else{
+    locked = "false"
+}
+    }
+    function taken(space){
+            document.getElementById("invalidMove").style.display = "block";
+                document.getElementById("invalidMove").textContent = "Invalid Move! Space " + space + " is taken!";
+                document.getElementById("move").value = "";
+        }
+        function invalidMove(){
+            document.getElementById("invalidMove").textContent = "Invalid Move! Choose a space 1-9.";
+        document.getElementById("move").value = "";
+        }
+        function updateScoreboard(){
+        var oldScoreBoard = document.getElementById("scoreboard").textContent;
+        console.log (oldScoreBoard);
+        xwonstring = xwon.toString
+        ywonstring = ywon.toString
+        var newScoreBoard = "Player X:"+xwon +"         "     +   "Player Y:"+ywon
+        console.log (newScoreBoard)
+        document.getElementById("scoreboard").innerHTML = newScoreBoard;
+        }
+    function winAnnouncer(player){
+        lockBoardState()
+        document.getElementById("invalidMove").textContent = "Player " + player + " Wins!";
+        document.getElementById("move").value = "";
+        if (player == "Y"){
+            ywon++ 
+        }else{
+            xwon++
+        }
+        document.getElementById("boardResetter").style.display = "block";
+        document.getElementById("invalidMove").style.display = "block";
+    }
+    function checkGameState(){
+        if (locked == "false"){
+     if (xdiag1 > 2){
         winAnnouncer("X")
         updateScoreboard()
 
@@ -460,51 +498,12 @@ if (xdiag1 > 2){
         updateScoreboard()
 
      } }
-
      if (onetaken > 0 && twotaken > 0 && threetaken > 0 && fourtaken > 0 && fivetaken > 0 && sixtaken > 0 && seventaken > 0 && eighttaken > 0 && ninetaken > 0){
         document.getElementById("invalidMove").textContent = "Draw!";
         document.getElementById("move").value = "";
         document.getElementById("boardResetter").style.display = "block";
         document.getElementById("invalidMove").style.display = "block";
         }}
-    function resetBoard(){
-        lockBoardState()
-        document.getElementById("board").textContent = originboard
-        document.getElementById("board").textContent = originboard
-        document.getElementById("boardResetter").style.display = "none";
-        document.getElementById("invalidMove").style.display = "none";
-        xleftvert = 0;
-        xmidvert = 0;
-        xrightvert = 0;
-        xtophor = 0;
-        xmidhor = 0;
-        xlowhor = 0;
-        xdiag1 = 0;
-        xdiag2 = 0;
-        yleftvert = 0;
-        ymidvert = 0;
-        yrightvert = 0;
-        ytophor = 0;
-        ymidhor = 0;
-        ylowhor = 0;
-        ydiag1 = 0;
-        ydiag2 = 0;
-        onetaken = 0;
-        twotaken = 0;
-        threetaken = 0;
-        fourtaken = 0;
-        fivetaken = 0;
-        sixtaken = 0;
-        seventaken = 0;
-        eighttaken = 0;
-        ninetaken = 0;
-    }
-    function lockBoardState(){
-if (locked == "false"){
-    locked = "true"
-}else{
-    locked = "false"
-}
-    }
+    
 </script>
 </html>
