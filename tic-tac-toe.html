@@ -1,4 +1,10 @@
 <html>
+        <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Tic-Tac=Toe">
+        <meta name="keywords" content="Tic-Tac-Toe">
+        <meta name="author" content="Anthony Saldana-Valle">
+        </head>
     <!-- Created by Anthony Saldana-Valle -->
     h1 {      font-size: 300%;     } 
 .ascii-art {
@@ -107,23 +113,15 @@
             if (onetaken > 0){
             taken("1")
             }else{
-                document.getElementById("invalidMove").style.display = "none";
+                take("1")
                 onetaken++
-        var oldBoard = document.getElementById("board").textContent;
-console.log (oldBoard);
-var newBoard = oldBoard.replace("1", player)
-document.getElementById("board").innerHTML = newBoard;
 if (player === x){
-        player = Y;
-        console.log (player)
-        document.getElementById("turn").innerHTML = "Player Y Go (1-9)";
+    playerSwitch()
         xdiag1++
         xleftvert++
         xtophor++
     } else {
-        player = x
-        console.log (player)
-        document.getElementById("turn").innerHTML = "Player X Go (1-9)";
+        playerSwitch()
         ydiag1++
         yleftvert++
         ytophor++
@@ -136,22 +134,14 @@ if (player === x){
         if (twotaken > 0){
             taken("2");
             }else{
-                document.getElementById("invalidMove").style.display = "none";
-                twotaken++
-        var oldBoard = document.getElementById("board").textContent;
-console.log (oldBoard);
-var newBoard = oldBoard.replace("2", player)
-document.getElementById("board").innerHTML = newBoard;
+            take("2")
+            twotaken++
 if (player === x){
-        player = Y;
-        console.log (player)
-        document.getElementById("turn").innerHTML = "Player Y Go (1-9)";
+    playerSwitch()
         xtophor++
         xmidvert++
     } else {
-        player = x
-        console.log (player)
-        document.getElementById("turn").innerHTML = "Player X Go (1-9)";
+        playerSwitch()
         ytophor++
         ymidvert++
     }
@@ -163,200 +153,132 @@ if (moves === "3")
             if (threetaken > 0){
                 taken("3")
             }else{
-                document.getElementById("invalidMove").style.display = "none";
+                take("3")
                 threetaken++
-        var oldBoard = document.getElementById("board").textContent;
-console.log (oldBoard);
-var newBoard = oldBoard.replace("3", player)
-document.getElementById("board").innerHTML = newBoard;
 if (player === x){
-        player = Y;
-        console.log (player)
-        document.getElementById("turn").innerHTML = "Player Y Go (1-9)";
+    playerSwitch()
 xtophor++
 xrightvert++
 xdiag2++
     } else {
-        player = x
-        console.log (player)
-        document.getElementById("turn").innerHTML = "Player X Go (1-9)";
+        playerSwitch()
 ytophor++
 yrightvert++
 ydiag2++
     }
-    document.getElementById("invalidMove").textContent = "";
-    document.getElementById("move").value = "";
 }}
 if (moves === "4")
          {
             if (fourtaken > 0){
                 taken("4")
             }else{
-                document.getElementById("invalidMove").style.display = "none";
+                take("4")
                 fourtaken++
-        var oldBoard = document.getElementById("board").textContent;
-console.log (oldBoard);
-var newBoard = oldBoard.replace("4", player)
-document.getElementById("board").innerHTML = newBoard;
 if (player === x){
-        player = Y;
-        console.log (player)
-        document.getElementById("turn").innerHTML = "Player Y Go (1-9)";
+    playerSwitch()
         xmidhor++
         xleftvert++
     } else {
-        player = x
-        console.log (player)
-        document.getElementById("turn").innerHTML = "Player X Go (1-9)";
+        playerSwitch()
         ymidhor++
         yleftvert++
     }
-    document.getElementById("invalidMove").textContent = "";
-    document.getElementById("move").value = "";
 }}
 if (moves === "5")
          {
             if (fivetaken > 0){
                 taken("5")
             }else{
-                document.getElementById("invalidMove").style.display = "none";
+                take("5")
                 fivetaken++
-        var oldBoard = document.getElementById("board").textContent;
-console.log (oldBoard);
-var newBoard = oldBoard.replace("5", player)
-document.getElementById("board").innerHTML = newBoard;
 if (player === x){
-        player = Y;
-        console.log (player)
-        document.getElementById("turn").innerHTML = "Player Y Go (1-9)";
+    playerSwitch()
         xmidhor++
         xmidvert++
         xdiag1++
         xdiag2++
     } else {
-        player = x
-        console.log (player)
-        document.getElementById("turn").innerHTML = "Player X Go (1-9)";
+        playerSwitch()
         ymidhor++
         ymidvert++
         ydiag1++
         ydiag2++
     }
-    document.getElementById("invalidMove").textContent = "";
-    document.getElementById("move").value = "";
+
 }}
 if (moves === "6")
          {
             if (sixtaken > 0){
                 taken("6")
             }else{
-                document.getElementById("invalidMove").style.display = "none";
+                take("6")
                 sixtaken++
-        var oldBoard = document.getElementById("board").textContent;
-console.log (oldBoard);
-var newBoard = oldBoard.replace("6", player)
-document.getElementById("board").innerHTML = newBoard;
 if (player === x){
-        player = Y;
-        console.log (player)
-        document.getElementById("turn").innerHTML = "Player Y Go (1-9)";
+    playerSwitch()
         xmidhor++
         xrightvert++
     } else {
-        player = x
-        console.log (player)
-        document.getElementById("turn").innerHTML = "Player X Go (1-9)";
+        playerSwitch()
         ymidhor++
         yrightvert++
     }
-    document.getElementById("invalidMove").textContent = "";
-    document.getElementById("move").value = "";
 }}
 if (moves === "7")
          {
             if (seventaken > 0){
                 taken("7")
             }else{
-                document.getElementById("invalidMove").style.display = "none";
+                take("7")
                 seventaken++
-        var oldBoard = document.getElementById("board").textContent;
-console.log (oldBoard);
-var newBoard = oldBoard.replace("7", player)
-document.getElementById("board").innerHTML = newBoard;
 if (player === x){
-        player = Y;
-        console.log (player)
-        document.getElementById("turn").innerHTML = "Player Y Go (1-9)";
+    playerSwitch()
         xdiag2++
         xleftvert++
         xlowhor++
     } else {
-        player = x
-        console.log (player)
-        document.getElementById("turn").innerHTML = "Player X Go (1-9)";
+        playerSwitch()
         ydiag2++
         yleftvert++
         ylowhor++
 
     }
-    document.getElementById("invalidMove").textContent = "";
-    document.getElementById("move").value = "";
 }}
 if (moves === "8")
          {
             if (eighttaken > 0){
                 taken("8")
             }else{
-                document.getElementById("invalidMove").style.display = "none";
+                take("8")
                 eighttaken++
-        var oldBoard = document.getElementById("board").textContent;
-console.log (oldBoard);
-var newBoard = oldBoard.replace("8", player)
-document.getElementById("board").innerHTML = newBoard;
 if (player === x){
-        player = Y;
-        console.log (player)
-        document.getElementById("turn").innerHTML = "Player Y Go (1-9)";
+    playerSwitch()
         xmidvert++
         xlowhor++
     } else {
-        player = x
-        console.log (player)
-        document.getElementById("turn").innerHTML = "Player X Go (1-9)";
+        playerSwitch()
         ylowhor++
         ymidvert++
     }
-    document.getElementById("invalidMove").textContent = "";
-    document.getElementById("move").value = "";
 }}
 if (moves === "9")
          {
             if (ninetaken > 0){
                 taken("9")
             }else{
-                document.getElementById("invalidMove").style.display = "none";
+                take("9")
                 ninetaken++
-        var oldBoard = document.getElementById("board").textContent;
-console.log (oldBoard);
-var newBoard = oldBoard.replace("9", player)
-document.getElementById("board").innerHTML = newBoard;
 if (player === x){
-        player = Y;
-        console.log (player)
-        document.getElementById("turn").innerHTML = "Player Y Go (1-9)";
+    playerSwitch()
         xdiag1++
         xrightvert++
         xlowhor++
     } else {
-        player = x
-        console.log (player)
-        document.getElementById("turn").innerHTML = "Player X Go (1-9)";
+        playerSwitch()
         ydiag1++
         yrightvert++
         ylowhor++
     }
-    document.getElementById("invalidMove").textContent = "";
-    document.getElementById("move").value = "";
+
     
 }}}
     checkGameState();
@@ -504,6 +426,25 @@ if (locked == "false"){
         document.getElementById("boardResetter").style.display = "block";
         document.getElementById("invalidMove").style.display = "block";
         }}
-    
+        function take(space){
+        document.getElementById("invalidMove").style.display = "none";
+        var oldBoard = document.getElementById("board").textContent;
+        console.log (oldBoard);
+        var newBoard = oldBoard.replace(space, player)
+        document.getElementById("board").innerHTML = newBoard;
+        }
+    function playerSwitch(){
+        if (player === x){
+        player = Y;
+        console.log (player)
+        document.getElementById("turn").innerHTML = "Player Y Go (1-9)";
+    } else {
+        player = x
+        console.log (player)
+        document.getElementById("turn").innerHTML = "Player X Go (1-9)";
+    }
+    document.getElementById("invalidMove").textContent = "";
+    document.getElementById("move").value = "";
+    }
 </script>
 </html>
