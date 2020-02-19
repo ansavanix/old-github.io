@@ -1,6 +1,6 @@
 # EgomaniacDev WebProjects
 <br>
-<h1> An assortnment of web based tools. </h1>
+<h1> An assortnment of web based projects. </h1>
 <h1>D20</h1>
 <BR> 
 <h2>  D20.html is a normal 20 sided dice with no tricks up its sleeve.
