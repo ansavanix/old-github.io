@@ -421,10 +421,7 @@ if (locked == "false"){
 
      } }
      if (onetaken > 0 && twotaken > 0 && threetaken > 0 && fourtaken > 0 && fivetaken > 0 && sixtaken > 0 && seventaken > 0 && eighttaken > 0 && ninetaken > 0){
-        document.getElementById("invalidMove").textContent = "Draw!";
-        document.getElementById("move").value = "";
-        document.getElementById("boardResetter").style.display = "block";
-        document.getElementById("invalidMove").style.display = "block";
+        gameDraw()
         }}
         function take(space){
         document.getElementById("invalidMove").style.display = "none";
@@ -445,6 +442,13 @@ if (locked == "false"){
     }
     document.getElementById("invalidMove").textContent = "";
     document.getElementById("move").value = "";
+    }
+    function gameDraw(){
+        lockBoardState()
+        document.getElementById("invalidMove").textContent = "Draw!";
+        document.getElementById("move").value = "";
+        document.getElementById("boardResetter").style.display = "block";
+        document.getElementById("invalidMove").style.display = "block";
     }
 </script>
 </html>
