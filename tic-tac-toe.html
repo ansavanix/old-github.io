@@ -317,6 +317,7 @@ if (locked == "false"){
         function invalidMove(){
             document.getElementById("invalidMove").textContent = "Invalid Move! Choose a space 1-9.";
         document.getElementById("move").value = "";
+        document.getElementById("invalidMove").style.display = "Block";
         }
         function updateScoreboard(){
         var oldScoreBoard = document.getElementById("scoreboard").textContent;
