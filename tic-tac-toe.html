@@ -341,76 +341,40 @@ if (locked == "false"){
         document.getElementById("invalidMove").style.display = "block";
     }
     function checkGameState(){
-        if (locked == "false"){
-     if (xdiag1 > 2){
-        winAnnouncer("X")
-        updateScoreboard()
-
-     }   
-     if (xdiag2 > 2){
-        winAnnouncer("X")
-        updateScoreboard()
-     }   
-     if (xtophor > 2){
-        winAnnouncer("X")
-        updateScoreboard()
-     }   
-     if (xmidhor > 2){
-        winAnnouncer("X")
-        updateScoreboard()
-     }   
-     if (xlowhor > 2){
-        winAnnouncer("X")
-        updateScoreboard()
-     }   
-     if (xleftvert > 2){
-        winAnnouncer("X")
-        updateScoreboard()
-     }   
-     if (xmidvert > 2){
-        winAnnouncer("X")
-        updateScoreboard()
-     }   
-     if (xrightvert > 2){
-        winAnnouncer("X")
-        updateScoreboard()
-     }   
-     if (ydiag1 > 2){
-        winAnnouncer("Y")
-        updateScoreboard()
-     }   
-     if (ydiag2 > 2){
-        winAnnouncer("Y")
-        updateScoreboard()
-     }   
-     if (ytophor > 2){
-        winAnnouncer("Y")
-        updateScoreboard()
-     }   
-     if (ymidhor > 2){
-        winAnnouncer("Y")
-        updateScoreboard()
-     }   
-     if (ylowhor > 2){
-        winAnnouncer("Y")
-        updateScoreboard()
-     }   
-     if (yleftvert > 2){
-        winAnnouncer("Y")
-        updateScoreboard()
-     }   
-     if (ymidvert > 2){
-        winAnnouncer("Y")
-        updateScoreboard()
-     }   
-     if (yrightvert > 2){
-        winAnnouncer("Y")
-        updateScoreboard()
-
-     } }
-     if (onetaken > 0 && twotaken > 0 && threetaken > 0 && fourtaken > 0 && fivetaken > 0 && sixtaken > 0 && seventaken > 0 && eighttaken > 0 && ninetaken > 0){
-        gameDraw()
-        }}
+        if (locked == "false"){if (xdiag1 > 2){
+win("X")
+     }  if (xdiag2 > 2){
+win("X")
+     }  if (xtophor > 2){
+win("X")
+     }  if (xmidhor > 2){
+win("X")
+     }  if (xlowhor > 2){
+win("X")
+     }  if (xleftvert > 2){
+win("X")
+     }  if (xmidvert > 2){
+win("X")
+     }  if (xrightvert > 2){
+win("X")
+     }  if (ydiag1 > 2){
+win("Y")
+     }  if (ydiag2 > 2){
+win("Y")
+     }  if (ytophor > 2){
+win("Y")
+     }  if (ymidhor > 2){
+win("Y")
+     }  if (ylowhor > 2){
+win("Y")
+     }  if (yleftvert > 2){
+win("Y")
+     }  if (ymidvert > 2){
+win("Y")
+     }  if (yrightvert > 2){
+win("Y")
+     } }if (onetaken > 0 && twotaken > 0 && threetaken > 0 && fourtaken > 0 && fivetaken > 0 && sixtaken > 0 && seventaken > 0 && eighttaken > 0 && ninetaken > 0){
+        gameDraw()}}
         function take(space){
         document.getElementById("invalidMove").style.display = "none";
         var oldBoard = document.getElementById("board").textContent;
@@ -437,6 +401,16 @@ if (locked == "false"){
         document.getElementById("move").value = "";
         document.getElementById("boardResetter").style.display = "block";
         document.getElementById("invalidMove").style.display = "block";
+    }
+    function win(player){
+        if (player == "X"){
+        winAnnouncer("X")
+        updateScoreboard() 
+        }else if (player == "Y"){
+        winAnnouncer("Y")
+        updateScoreboard() 
+        }
+
     }
 </script>
 </html>
