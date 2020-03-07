@@ -373,8 +373,8 @@ win("Y")
 win("Y")
      }  if (yrightvert > 2){
 win("Y")
-     } }if (onetaken > 0 && twotaken > 0 && threetaken > 0 && fourtaken > 0 && fivetaken > 0 && sixtaken > 0 && seventaken > 0 && eighttaken > 0 && ninetaken > 0){
-        gameDraw()}}
+     } else if (onetaken > 0 && twotaken > 0 && threetaken > 0 && fourtaken > 0 && fivetaken > 0 && sixtaken > 0 && seventaken > 0 && eighttaken > 0 && ninetaken > 0){
+        gameDraw()}}}
         function take(space){
         document.getElementById("invalidMove").style.display = "none";
         var oldBoard = document.getElementById("board").textContent;
